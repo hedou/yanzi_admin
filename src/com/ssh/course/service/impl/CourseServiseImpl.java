@@ -29,7 +29,7 @@ public class CourseServiseImpl implements CourseService {
 		pageBean.setPageSize(pageSize);
 		//总共记录数
 		int totalCount = 0 ;
-		totalCount = courseDao.findNewsCount();
+		totalCount = courseDao.findCourseCount();
 		//System.out.println(totalCount);
 		pageBean.setTotalCount(totalCount);
 		//总页数
@@ -47,6 +47,31 @@ public class CourseServiseImpl implements CourseService {
 	    pageBean.setCurrentPage(currentPage);
 		
 		return pageBean;
+	}
+	
+	
+
+	@Override
+	public Course findCourseById(Integer id) {
+		return courseDao.findCourseById(id);
+	}
+
+	@Override
+	public void delete(Course existCourse) {
+		courseDao.delete(existCourse);
+		
+	}
+
+	@Override
+	public void update(Course course) {
+		courseDao.update(course);
+		
+	}
+
+	@Override
+	public void add(Course course) {
+		courseDao.add(course);
+		
 	}
 	
 	

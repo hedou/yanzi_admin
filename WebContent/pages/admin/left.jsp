@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>菜单</title>
-<link href="${pageContext.request.contextPath}/css/left.css"
+<link href="${pageContext.request.contextPath}/pages/css/left.css"
 	rel="stylesheet" type="text/css" />
 <link rel="StyleSheet"
-	href="${pageContext.request.contextPath}/css/dtree.css" type="text/css" />
+	href="${pageContext.request.contextPath}/pages/css/dtree.css" type="text/css" />
 </head>
 <body>
 	<table width="100" border="0" cellspacing="0" cellpadding="0">
@@ -23,7 +23,7 @@
 						href="javascript: d.closeAll();">关闭所有</a>
 
 					<script type="text/javascript"
-						src="${pageContext.request.contextPath}/js/dtree.js"></script>
+						src="${pageContext.request.contextPath}/pages/js/dtree.js"></script>
 					<script type="text/javascript">
 		
 		d = new dTree('d');

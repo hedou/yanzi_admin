@@ -11,14 +11,14 @@
 body {
 	color: white;
 }
-</style>·
+</style>
 </head>
-<body
-	<%-- style="background:url(${pageContext.request.contextPath}/images/adminbg.jpg) ">--%>
+<body style="background:url(${pageContext.request.contextPath}/images/adminbg.jpg)">
+	
 	<center>
 		<s:actionerror />
-
 	</center>
+	
 	<form method="post"
 		action="${pageContext.request.contextPath }/adminUser_login.action"
 		target="_parent" name='theForm'>
@@ -45,5 +45,5 @@ body {
 		</table>
 		<input type="hidden" name="act" value="signin" />
 	</form>
-
 </body>
+</html>
