@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ssh.course.domain.Course" table="Course">
+
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+
+		<property name="Title" column="Title"></property>
+		<property name="EnTitle" column="EnTitle"></property>
+		<property name="Image" column="Image"></property>
+		<property name="Valid" column="Valid"></property>
+		<property name="AddTime" column="AddTime"></property>
+		<property name="UpdateTime" column="UpdateTime"></property>
+	</class>
+</hibernate-mapping>

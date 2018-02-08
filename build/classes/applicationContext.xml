@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+	<!-- 配置连接池datasource -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/College" />
+		<property name="user" value="root" />
+		<property name="password" value="yanzi@123456" />
+	</bean>
+
+	<!-- 加载hibernate.cfg.xml文件，创建sessionfactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<!-- 注入连接池 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 加载方言，可选项 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<!-- 引入映射的配置文件 -->
+		<property name="mappingResources">
+			<list>
+				<!-- <value>com/ssh/news/domain/News.hbm.xml</value>
+				<value>com/ssh/inform/domain/Inform.hbm.xml</value>
+				<value>com/ssh/notice/domain/Notice.hbm.xml</value>
+				<value>com/ssh/dq/domain/DangQun.hbm.xml</value>
+				<value>com/ssh/image/domain/MyImage.hbm.xml</value>
+				<value>com/ssh/advice/domain/Advice.hbm.xml</value>-->
+				<value>com/ssh/course/domain/Course.hbm.xml</value>
+				<value>com/ssh/adminuser/domain/AdminUser.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- 先配置平台事物管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- 开启事物注解方式 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+<!-- 
+	<bean class="com.ssh.leaderletter.action.LeaderLetterAdminAction"
+		id="leaderLetterAdminAction">
+		<property name="leaderLetterService" ref="leaderLetterService"></property>
+	</bean>
+	<bean id="leaderLetterAction" class="com.ssh.leaderletter.action.LeaderLetterAction">
+		<property name="leaderLetterService" ref="leaderLetterService"></property>
+	</bean>
+	<bean id="leaderLetterService" class="com.ssh.leaderletter.service.LeaderLetterServiceImpl">
+		<property ref="leaderLetterDao" name="leaderLetterDao"></property>
+	</bean>
+	<bean class="com.ssh.leaderletter.dao.LeaderLetterDaoImpl" id="leaderLetterDao">
+		<property ref="sessionFactory" name="sessionFactory"></property>
+	</bean>
+ -->
+
+
+	<bean name="adminUserAction" class="com.ssh.adminuser.action.AdminUserAction">
+		<property name="adminUserService" ref="adminUserService"></property>
+	</bean>
+	<bean name="adminUserService" class="com.ssh.adminuser.service.AdminUserServiceImpl">
+		<property name="adminUserDao" ref="adminUserDao"></property>
+	</bean>
+	<bean name="adminUserDao" class="com.ssh.adminuser.dao.AdminUserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean name="courseAction" class="com.ssh.course.action.CourseAction">
+		<property name="courseService" ref="courseService"></property>
+	</bean>
+	<bean name="courseService" class="com.ssh.course.service.impl.CourseServiseImpl">
+		<property name="courseDao" ref="courseDao"></property>
+	</bean>
+	<bean name="courseDao" class="com.ssh.course.dao.impl.CourseDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>
+
+
+
+
+
+
