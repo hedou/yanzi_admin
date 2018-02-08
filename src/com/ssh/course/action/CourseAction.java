@@ -2,6 +2,7 @@ package com.ssh.course.action;
 
 import com.opensymphony.xwork2.ActionContext;
 
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.ssh.course.domain.Course;
@@ -14,7 +15,7 @@ public class CourseAction extends ActionSupport implements ModelDriven<Course> {
 	private Course course = new Course();
 
 	public Course getModel() {
-		return this.course;
+		return course;
 	}
 	
 	private CourseService courseService;
@@ -28,14 +29,39 @@ public class CourseAction extends ActionSupport implements ModelDriven<Course> {
 		this.currentPage = currentPage;
 	}
 	
-	public String findCourseListByPage(){
-		 
+	public String findCourseListByPage(){	 
 		 //∑÷“≥∑µªÿpageBean
 	    PageBean<Course> pageBean = courseService.findCourseListByPage(currentPage);
   
 	    ActionContext.getContext().getValueStack().set("pageBean", pageBean);
-		return "courseList";
-		
+		return "courseList";	
 	}
 
+	public String delete()
+	  {
+	    Course existCourse = courseService.findCourseById(course.getId());
+	    courseService.delete(existCourse);
+	    return "deleteSuccess";
+	  }
+	
+	 public String edit()
+	  {
+	    course = courseService.findCourseById(course.getId());
+	    return "edit";
+	  }
+	 
+	 
+	public String update()
+	  {
+	    courseService.update(course);
+	    return "updateSuccess";
+	  }
+	
+	public String add(){
+		
+		courseService.add(course);
+		return "addSuccess";
+	}
+	
+	
 }

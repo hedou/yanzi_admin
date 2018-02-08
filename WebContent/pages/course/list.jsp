@@ -11,9 +11,11 @@
 <body>
 	<br>
 
-	<a href="${pageContext.request.contextPath}/course/add.jsp"></a>
+	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/pages/course/add.jsp">
+	<input type="button" name="test" value="添加"/></a>
+	</div>
 	<form id="Form1" name="Form1"
-		action="${pageContext.request.contextPath}/user/list.jsp"
+		action=""
 		method="post">
 		<table cellSpacing="1" cellPadding="0" width="100%" align="center"
 			bgColor="#f5fafe" border="0">
@@ -50,7 +52,11 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%"><s:property value="#u.id" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.Title" /></td>
+										width="10%">
+										
+										<s:property value="#u.Title" />
+										
+										</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.EnTitle" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"

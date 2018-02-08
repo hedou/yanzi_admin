@@ -25,7 +25,7 @@ TH {
 	COLOR: #000000
 }
 </style>
-<link href="${pageContext.request.contextPath}/css/Style1.css"
+<link href="${pageContext.request.contextPath}/pages/css/Style1.css"
 	rel="stylesheet" type="text/css">
 </HEAD>
 <body>
@@ -35,7 +35,7 @@ TH {
 
 
 			<td align="center" width="100%"
-				background="${pageContext.request.contextPath}/images/adminbg.jpg">
+				background="${pageContext.request.contextPath}/pages/images/adminbg.jpg">
 				<div style="color: white; font-size: 40px;">雁字后台录入管理系统</div>
 			</td>
 		</tr>
@@ -43,7 +43,7 @@ TH {
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td height="30" valign="bottom"
-				background="${pageContext.request.contextPath}/images/mis_01.jpg">
+				background="${pageContext.request.contextPath}/pages/images/mis_01.jpg">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
 					<tr>
 						<td width="85%" align="left">

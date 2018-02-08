@@ -1,6 +1,6 @@
 package com.ssh.course.domain;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 
 public class Course {
@@ -10,8 +10,8 @@ public class Course {
 	private String EnTitle;
 	private String Image;
 	private Integer Valid;
-	private Timestamp AddTime;
-	private Timestamp UpdateTime;
+	private Date AddTime;
+	private Date UpdateTime;
 	public Integer getId() {
 		return Id;
 	}
@@ -43,19 +43,17 @@ public class Course {
 	public void setValid(Integer valid) {
 		Valid = valid;
 	}
-	public Timestamp getAddTime() {
+	public Date getAddTime() {
 		return AddTime;
 	}
-	public void setAddTime(Timestamp addTime) {
+	public void setAddTime(Date addTime) {
 		AddTime = addTime;
 	}
-	public Timestamp getUpdateTime() {
+	public Date getUpdateTime() {
 		return UpdateTime;
 	}
-	public void setUpdateTime(Timestamp updateTime) {
+	public void setUpdateTime(Date updateTime) {
 		UpdateTime = updateTime;
-	}
-
-	
+	}	
 
 }

@@ -9,6 +9,10 @@ public interface CourseDao {
 
 
 	List<Course> findCourseListByPage(int begin, int pageSize);
-	int findNewsCount();
+	int findCourseCount();
+	Course findCourseById(Integer id);
+	void delete(Course existCourse);
+	void update(Course course);
+	void add(Course course);
 
 }

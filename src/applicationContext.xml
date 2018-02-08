@@ -15,7 +15,7 @@
 	<!-- 配置连接池datasource -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/College" />
+		<property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/College?userUnicode=true&amp;characterEncoding=utf-8" />
 		<property name="user" value="root" />
 		<property name="password" value="yanzi@123456" />
 	</bean>
@@ -41,8 +41,8 @@
 				<value>com/ssh/inform/domain/Inform.hbm.xml</value>
 				<value>com/ssh/notice/domain/Notice.hbm.xml</value>
 				<value>com/ssh/dq/domain/DangQun.hbm.xml</value>
-				<value>com/ssh/image/domain/MyImage.hbm.xml</value>
-				<value>com/ssh/advice/domain/Advice.hbm.xml</value>-->
+				<value>com/ssh/image/domain/MyImage.hbm.xml</value>-->
+				<value>com/ssh/lesson/domain/Lesson.hbm.xml</value>
 				<value>com/ssh/course/domain/Course.hbm.xml</value>
 				<value>com/ssh/adminuser/domain/AdminUser.hbm.xml</value>
 			</list>
@@ -95,6 +95,10 @@
 	<bean name="courseDao" class="com.ssh.course.dao.impl.CourseDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	
+	
+	
+	
 </beans>
 
 

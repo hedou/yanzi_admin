@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ssh.course.domain.Lesson" table="Lesson">
+
+		<id name="id" column="id">
+			<generator class="native"></generator>
+		</id>
+
+		<property name="Title" column="Title"></property>
+		<property name="Index" column="Index"></property>
+		<property name="Image" column="Image"></property>
+		<property name="PrimerTitle" column="PrimerTitle"></property>
+		<property name="PrimerBrief" column="PrimerBrief"></property>
+		<property name="PrimerImage" column="PrimerImage"></property>
+		<property name="PrimerContent" column="PrimerContent"></property>
+		<property name="SummaryImage" column="SummaryImage"></property>
+		
+		<property name="Valid" column="Valid"></property>
+		<property name="AddTime" column="AddTime"></property>
+		<property name="UpdateTime" column="UpdateTime"></property>
+		
+		<many-to-one name="course" class="com.ssh.course.domain.Course" column="CourseId"></many-to-one>
+		
+		
+	</class>
+</hibernate-mapping>
