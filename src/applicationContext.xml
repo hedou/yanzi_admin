@@ -15,7 +15,7 @@
 	<!-- 配置连接池datasource -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/College?userUnicode=true&amp;characterEncoding=utf-8" />
+		<property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/test?userUnicode=true&amp;characterEncoding=utf-8" />
 		<property name="user" value="root" />
 		<property name="password" value="yanzi@123456" />
 	</bean>
@@ -37,18 +37,13 @@
 		<!-- 引入映射的配置文件 -->
 		<property name="mappingResources">
 			<list>
-				<!-- <value>com/ssh/news/domain/News.hbm.xml</value>
-				<value>com/ssh/inform/domain/Inform.hbm.xml</value>
-				<value>com/ssh/notice/domain/Notice.hbm.xml</value>
-				<value>com/ssh/dq/domain/DangQun.hbm.xml</value>
-				<value>com/ssh/image/domain/MyImage.hbm.xml</value>-->
-				<value>com/ssh/lesson/domain/Lesson.hbm.xml</value>
-				<value>com/ssh/course/domain/Course.hbm.xml</value>
 				<value>com/ssh/adminuser/domain/AdminUser.hbm.xml</value>
+				<value>com/ssh/course/domain/Course.hbm.xml</value>
+				
+				<value>com/ssh/term/domain/Term.hbm.xml</value>
 			</list>
 		</property>
-	</bean>
-
+	</bean>	
 
 	<!-- 先配置平台事物管理器 -->
 	<bean id="transactionManager"
@@ -58,23 +53,6 @@
 
 	<!-- 开启事物注解方式 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
-
-<!-- 
-	<bean class="com.ssh.leaderletter.action.LeaderLetterAdminAction"
-		id="leaderLetterAdminAction">
-		<property name="leaderLetterService" ref="leaderLetterService"></property>
-	</bean>
-	<bean id="leaderLetterAction" class="com.ssh.leaderletter.action.LeaderLetterAction">
-		<property name="leaderLetterService" ref="leaderLetterService"></property>
-	</bean>
-	<bean id="leaderLetterService" class="com.ssh.leaderletter.service.LeaderLetterServiceImpl">
-		<property ref="leaderLetterDao" name="leaderLetterDao"></property>
-	</bean>
-	<bean class="com.ssh.leaderletter.dao.LeaderLetterDaoImpl" id="leaderLetterDao">
-		<property ref="sessionFactory" name="sessionFactory"></property>
-	</bean>
- -->
-
 
 	<bean name="adminUserAction" class="com.ssh.adminuser.action.AdminUserAction">
 		<property name="adminUserService" ref="adminUserService"></property>
@@ -96,6 +74,15 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
+	<bean name="termAction" class="com.ssh.term.action.TermAction">
+		<property name="termService" ref="termService"></property>
+	</bean>
+	<bean name="termService" class="com.ssh.term.service.impl.TermServiseImpl">
+		<property name="termDao" ref="termDao"></property>
+	</bean>
+	<bean name="termDao" class="com.ssh.term.dao.impl.TermDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	
 	
 	

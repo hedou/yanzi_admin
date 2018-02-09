@@ -1,22 +1,23 @@
 package com.ssh.course.domain;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 
 public class Course {
 	
-	private Integer Id;
+	private Integer CourseId;
 	private String Title;
 	private String EnTitle;
 	private String Image;
 	private Integer Valid;
-	private Date AddTime;
-	private Date UpdateTime;
-	public Integer getId() {
-		return Id;
+	private Timestamp AddTime;
+	private Timestamp UpdateTime;
+
+	public Integer getCourseId() {
+		return CourseId;
 	}
-	public void setId(Integer id) {
-		Id = id;
+	public void setCourseId(Integer courseId) {
+		CourseId = courseId;
 	}
 	public String getTitle() {
 		return Title;
@@ -43,17 +44,18 @@ public class Course {
 	public void setValid(Integer valid) {
 		Valid = valid;
 	}
-	public Date getAddTime() {
+	public Timestamp getAddTime() {
 		return AddTime;
 	}
-	public void setAddTime(Date addTime) {
+	public void setAddTime(Timestamp addTime) {
 		AddTime = addTime;
 	}
-	public Date getUpdateTime() {
+	public Timestamp getUpdateTime() {
 		return UpdateTime;
 	}
-	public void setUpdateTime(Date updateTime) {
+	public void setUpdateTime(Timestamp updateTime) {
 		UpdateTime = updateTime;
-	}	
+	}
+
 
 }

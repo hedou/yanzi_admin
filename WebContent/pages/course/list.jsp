@@ -4,7 +4,7 @@
 <HEAD>
 <meta http-equiv="Content-Language" content="zh-cn">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="${pageContext.request.contextPath}/css/Style1.css"
+<link href="${pageContext.request.contextPath}/pages/css/Style1.css"
 	rel="stylesheet" type="text/css" />
 
 </HEAD>
@@ -50,12 +50,13 @@
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="3%"><s:property value="#u.id" /></td>
+										width="3%"><s:property value="#u.CourseId" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
 										
+										<a href="${ pageContext.request.contextPath }/term_findTermListByCourseId.action?CourseId=<s:property value="#u.CourseId"/>">
 										<s:property value="#u.Title" />
-										
+										</a>
 										</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.EnTitle" /></td>
@@ -71,14 +72,14 @@
 									<td align="center" style="HEIGHT: 22px"><a
 										href="${ pageContext.request.contextPath }/course_edit.action?id=<s:property value="#u.id"/>">
 											<img
-											src="${pageContext.request.contextPath}/images/i_edit.gif"
+											src="${pageContext.request.contextPath}/pages/images/i_edit.gif"
 											border="0" style="CURSOR: hand">
 									</a></td>
 
 									<td align="center" style="HEIGHT: 22px"><a
 										href="${ pageContext.request.contextPath }/course_delete.action?id=<s:property value="#u.id"/>">
 											<img
-											src="${pageContext.request.contextPath}/images/i_del.gif"
+											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">
 									</a></td>
 								</tr>
