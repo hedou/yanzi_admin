@@ -22,4 +22,27 @@ public class TermServiseImpl implements TermService {
 		return termDao.findTermListByCourseId(courseId);
 	}
 
+	@Override
+	public void addTerm(Term term) {
+		termDao.addTerm(term);
+		
+	}
+
+	@Override
+	public Term findTermById(Integer t_id) {
+		return termDao.findTermById(t_id);
+	}
+
+	@Override
+	public void update(Term term) {
+		termDao.update(term);
+		
+	}
+
+	@Override
+	public void delete(Term existTerm) {
+		termDao.delete(existTerm);
+		
+	}
+
 }

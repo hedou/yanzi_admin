@@ -37,10 +37,16 @@
 		<!-- 引入映射的配置文件 -->
 		<property name="mappingResources">
 			<list>
+			
+				
 				<value>com/ssh/adminuser/domain/AdminUser.hbm.xml</value>
 				<value>com/ssh/course/domain/Course.hbm.xml</value>
 				
 				<value>com/ssh/term/domain/Term.hbm.xml</value>
+				<value>com/ssh/lesson/domain/Lesson.hbm.xml</value>
+				<value>com/ssh/question/domain/Question.hbm.xml</value>
+				<value>com/ssh/level/domain/Level.hbm.xml</value>
+				
 			</list>
 		</property>
 	</bean>	
@@ -76,6 +82,7 @@
 	
 	<bean name="termAction" class="com.ssh.term.action.TermAction">
 		<property name="termService" ref="termService"></property>
+		<property name="courseService" ref="courseService"></property>
 	</bean>
 	<bean name="termService" class="com.ssh.term.service.impl.TermServiseImpl">
 		<property name="termDao" ref="termDao"></property>
@@ -85,6 +92,41 @@
 	</bean>
 	
 	
+	<bean name="lessonAction" class="com.ssh.lesson.action.LessonAction">
+		<property name="lessonService" ref="lessonService"></property>
+		<property name="termService" ref="termService"></property>
+	</bean>
+	<bean name="lessonService" class="com.ssh.lesson.service.impl.LessonServiceImpl">
+		<property name="lessonDao" ref="lessonDao"></property>
+	</bean>
+	<bean name="lessonDao" class="com.ssh.lesson.dao.impl.LessonDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+		<property name="termService" ref="termService"></property>
+	</bean>
+	
+	
+	<bean name="questionAction" class="com.ssh.question.action.QuestionAction">
+		<property name="questionService" ref="qustionService"></property>
+		<property name="lessonService" ref="lessonService"></property>
+	</bean>
+	<bean name="qustionService" class="com.ssh.question.service.impl.QuestionServiceImpl">
+		<property name="questionDao" ref="questionDao"></property>
+	</bean>
+	<bean name="questionDao" class="com.ssh.question.dao.impl.QuestionDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+	
+	<bean name="levelAction" class="com.ssh.level.action.LevelAction">
+		<property name="levelService" ref="levelService"></property>
+	</bean>
+	<bean name="levelService" class="com.ssh.level.service.impl.LevelServiceImpl">
+		<property name="levelDao" ref="levelDao"></property>
+	</bean>
+	<bean name="levelDao" class="com.ssh.level.dao.impl.LevelDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 	
 </beans>
 

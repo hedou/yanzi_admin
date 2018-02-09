@@ -1,6 +1,5 @@
 package com.ssh.term.domain;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 import com.ssh.course.domain.Course;

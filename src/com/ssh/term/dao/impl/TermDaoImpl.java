@@ -21,4 +21,34 @@ public class TermDaoImpl extends HibernateDaoSupport implements TermDao {
 		return null;
 	}
 
+	@Override
+	public void addTerm(Term term) {
+		this.getHibernateTemplate().save(term);
+		
+	}
+
+	@Override
+	public Term findTermById(Integer t_id) {
+		
+		String hql = "from Term where t_id = ?";
+		List<Term> list = (List<Term>) this.getHibernateTemplate().find(hql, t_id);
+
+		if (list!=null && list.size()>0) {
+			return list.get(0);
+		}
+		return null;
+	}
+
+	@Override
+	public void update(Term term) {
+		this.getHibernateTemplate().update(term);
+		
+	}
+
+	@Override
+	public void delete(Term existTerm) {
+		this.getHibernateTemplate().delete(existTerm);
+		
+	}
+
 }

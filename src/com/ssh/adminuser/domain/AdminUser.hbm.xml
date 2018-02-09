@@ -7,11 +7,11 @@
 
 	<class name="com.ssh.adminuser.domain.AdminUser" table="adminuser">
 
-		<id name="uid" column="uid">
+		<id name="uid" column="uid"  type="java.lang.Integer">
 			<generator class="native"></generator>
 		</id>
-		<property name="username" column="username"></property>
-		<property name="password" column="password"></property>
+		<property name="username" column="username" type="java.lang.String"></property>
+		<property name="password" column="password" type="java.lang.String"></property>
 
 	</class>
 
