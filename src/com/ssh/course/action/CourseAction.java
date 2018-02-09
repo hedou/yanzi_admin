@@ -39,14 +39,14 @@ public class CourseAction extends ActionSupport implements ModelDriven<Course> {
 
 	public String delete()
 	  {
-	    Course existCourse = courseService.findCourseById(course.getId());
+	    Course existCourse = courseService.findCourseById(course.getCourseId());
 	    courseService.delete(existCourse);
 	    return "deleteSuccess";
 	  }
 	
 	 public String edit()
 	  {
-	    course = courseService.findCourseById(course.getId());
+	    course = courseService.findCourseById(course.getCourseId());
 	    return "edit";
 	  }
 	 

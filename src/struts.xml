@@ -21,7 +21,11 @@
 			</result>
 		</action>
 		
-
+		<action name="term_*" class="termAction" method="{1}">
+			<result name="termList">/pages/term/list.jsp</result>
+	
+		</action>
+		
 
 	</package>
 </struts>

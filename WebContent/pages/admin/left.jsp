@@ -28,14 +28,7 @@
 		
 		d = new dTree('d');
 		d.add('01',-1,'课程列表','${pageContext.request.contextPath}/course_findCourseListByPage.action?currentPage=1','','mainFrame');
-		/* d.add('0101','01','新闻管理','','','mainFrame');
-		d.add('010101','0101','新闻管理','${pageContext.request.contextPath}/newsadmin_findNewList.action?currentPage=1','','mainFrame');
-		d.add('0102','01','公告管理','','','mainFrame');
-		d.add('010201','0102','公告管理','${pageContext.request.contextPath}/noticeadmin_findNoticeList.action?currentPage=1','','mainFrame');
-		d.add('0103','01','意见反馈管理');
-		d.add('010301','0103','意见反馈管理','${pageContext.request.contextPath}/adviceadmin_findAdviceList.action?currentPage=1','','mainFrame');
-		d.add('0104','01','领导信箱管理');
-		d.add('010401','0104','领导信箱管理','${pageContext.request.contextPath}/leaderletteradmin_findLeaderLetterList.action?currentPage=1','','mainFrame'); */
+	
 		document.write(d);
 	
 	</script>

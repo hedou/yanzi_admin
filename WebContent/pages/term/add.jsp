@@ -10,14 +10,14 @@
 
 <body>
 	<form id="userAction_save_do" name="Form1"
-		action="${pageContext.request.contextPath}/course_add.action"
+		action="${pageContext.request.contextPath}/term_addTerm.action"
 		method="post">
 	
 		<table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
 			<tr>
 				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
-					height="26"><strong><STRONG>添加课程</STRONG> </strong></td>
+					height="26"><strong><STRONG>为课程添加学期</STRONG> </strong></td>
 			</tr>
 
 			<tr>
@@ -28,25 +28,63 @@
 				</td>
 
 			</tr>
-
 			<tr>
-				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					EnTitle</td>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					Brief：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="EnTitle" value=""/>
+					name="Brief" value="" />
 				</td>
-				
+
+			</tr>
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					Image：</td>
+				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
+					name="Image" value="" />
+				</td>
+
+			</tr>
+			
+			
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					Desc：</td>
+				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
+					name="TDesc" value="" />
+				</td>
+
 			</tr>
 			
 			<tr>
-			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image</td>
-				<td class="ta_01" bgColor="#ffffff">
-				<input style="height: 40px; width: 700px;" type="text"
-					name="Image" value=""/>
-				</td>
+				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
+					Index</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="text" name="Index"
+					value="" /></td>
+
 			</tr>
 			
+			
+			<tr>
+				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
+					Price</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="text" name="Price"
+					value="" /></td>
+
+			</tr>
+			
+			
+			<tr>
+				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
+					Discount</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="text" name="Discount"
+					value="" /></td>
+
+			</tr>
+			
+
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Valid</td>
@@ -55,6 +93,26 @@
 					value="" /></td>
 
 			</tr>
+			
+				<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					StartTime</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="datetime" name="StartTime"
+					value="" /></td>
+
+			</tr>
+			
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					EndTime</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="datetime" name="EndTime"
+					value="<s:property value=""/>" /></td>
+
+			</tr>
+			
+			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					AddTime</td>
