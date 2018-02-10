@@ -8,6 +8,7 @@ import com.ssh.course.dao.CourseDao;
 import com.ssh.course.domain.Course;
 
 import com.ssh.course.service.CourseService;
+import com.ssh.term.domain.Term;
 import com.ssh.utils.PageBean;
 
 @Transactional
@@ -73,6 +74,7 @@ public class CourseServiseImpl implements CourseService {
 		courseDao.add(course);
 		
 	}
+
 	
 	
 

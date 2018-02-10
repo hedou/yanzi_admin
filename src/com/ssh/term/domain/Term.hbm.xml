@@ -27,6 +27,8 @@
 		<many-to-one name="course" class="com.ssh.course.domain.Course" cascade="save-update"> 
 		<column name="CourseId"/>
 		
+		
+		
 		</many-to-one>
 		
 		

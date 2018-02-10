@@ -23,7 +23,19 @@
 		
 		<action name="term_*" class="termAction" method="{1}">
 			<result name="termList">/pages/term/list.jsp</result>
-	
+			<result name="edit">/pages/term/edit.jsp</result>
+			
+		</action>
+		
+		
+		<action name="lesson_*" class="lessonAction" method="{1}">
+			<result name="lessonList">/pages/lesson/list.jsp</result>
+			<result name="edit">/pages/lesson/edit.jsp</result>
+		</action>
+		
+		<action name="question_*" class="questionAction" method="{1}">
+			<result name="questionList">/pages/question/list.jsp</result>
+			<result name="edit">/pages/question/edit.jsp</result>
 		</action>
 		
 

@@ -1,14 +1,14 @@
 package com.ssh.lesson.domain;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
-import com.ssh.course.domain.Course;
-
+import com.ssh.term.domain.Term;
 
 public class Lesson {
-	private Integer Id;
 	
-	private Course course;
+	private Integer LessonId;
+	
+	private Term term;
 	
 	private String Title;
 	private String Image;
@@ -18,23 +18,30 @@ public class Lesson {
 	private String PrimerImage;
 	private String PrimerContent;
 	private String SummaryImage;
+	private String SummaryContent;
+	public String getSummaryContent() {
+		return SummaryContent;
+	}
+	public void setSummaryContent(String summaryContent) {
+		SummaryContent = summaryContent;
+	}
 	private Integer Valid;
-	private Date AddTime;
-	private Date UpdateTime;
-	public Integer getId() {
-		return Id;
-	}
-	public void setId(Integer id) {
-		Id = id;
-	}
+	private Timestamp AddTime;
+	private Timestamp UpdateTime;
 
-	public Course getCourse() {
-		return course;
-	}
-	public void setCourse(Course course) {
-		this.course = course;
-	}
 	
+	public Integer getLessonId() {
+		return LessonId;
+	}
+	public void setLessonId(Integer lessonId) {
+		LessonId = lessonId;
+	}
+	public Term getTerm() {
+		return term;
+	}
+	public void setTerm(Term term) {
+		this.term = term;
+	}
 	public String getTitle() {
 		return Title;
 	}
@@ -89,18 +96,19 @@ public class Lesson {
 	public void setValid(Integer valid) {
 		Valid = valid;
 	}
-	public Date getAddTime() {
+	public Timestamp getAddTime() {
 		return AddTime;
 	}
-	public void setAddTime(Date addTime) {
+	public void setAddTime(Timestamp addTime) {
 		AddTime = addTime;
 	}
-	public Date getUpdateTime() {
+	public Timestamp getUpdateTime() {
 		return UpdateTime;
 	}
-	public void setUpdateTime(Date updateTime) {
+	public void setUpdateTime(Timestamp updateTime) {
 		UpdateTime = updateTime;
 	}
+
 
 	
 }

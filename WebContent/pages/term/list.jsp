@@ -11,7 +11,7 @@
 <body>
 	<br>
 
-	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/term_sendCourseId.action">
+	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/pages/term/add.jsp?">
 	<input type="button" name="test" value="添加"/></a>
 	</div>
 	<form id="Form1" name="Form1"
@@ -50,7 +50,7 @@
 								<td align="center" width="6%">UpdateTime</td>
 								<td width="4%" align="center">编辑</td>
 								<td width="4%" align="center">删除</td>
-							</tr>
+							</tr>w
 							<s:iterator var="u" value="termList" status="status">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
@@ -58,9 +58,13 @@
 										width="3%"><s:property value="#u.t_Id" />
 									</td>
 						
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.Title" />
-									</td>
+								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="10%">
+										
+										<a href="${ pageContext.request.contextPath }/lesson_findLessonListByTermId.action?t_Id=<s:property value="#u.t_Id"/>">
+										<s:property value="#u.Title" />
+										</a>
+										</td>
 									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.Brief" />
@@ -101,12 +105,12 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="6%"><s:property value="#u.UpdateTime" /></td>
 									<td align="center" style="HEIGHT: 22px">
-									  <a href="${ pageContext.request.contextPath }/term_edit.action?id=<s:property value="#u.t_Id"/>">
+									  <a href="${ pageContext.request.contextPath }/term_edit.action?t_Id=<s:property value="#u.t_Id"/>">
 									     <img src="${pageContext.request.contextPath}/pages/images/i_edit.gif" border="0" style="CURSOR: hand"></a>
 									</td>
 
 									<td align="center" style="HEIGHT: 22px">
-									<a href="${ pageContext.request.contextPath }/term_delete.action?id=<s:property value="#u.t_Id"/>">
+									<a href="${ pageContext.request.contextPath }/term_delete.action?t_Id=<s:property value="#u.t_Id"/>">
 										<img src="${pageContext.request.contextPath}/pages/images/i_del.gif" width="16" height="16" border="0" style="CURSOR: hand">
 									</a>
 									</td>

@@ -28,7 +28,10 @@
 		
 		d = new dTree('d');
 		d.add('01',-1,'课程列表','${pageContext.request.contextPath}/course_findCourseListByPage.action?currentPage=1','','mainFrame');
-	
+		d.add('0101','01','勋章列表','${pageContext.request.contextPath}/level_findLevelList.action?','','mainFrame');
+		
+		
+		
 		document.write(d);
 	
 	</script>
