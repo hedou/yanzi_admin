@@ -1,6 +1,7 @@
 package com.ssh.course.service;
 
 import com.ssh.course.domain.Course;
+import com.ssh.level.domain.Level;
 import com.ssh.term.domain.Term;
 import com.ssh.utils.PageBean;
 

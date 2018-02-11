@@ -59,13 +59,14 @@
 										width="3%">
 										<s:property value="#u.LessonId" />
 										</td>
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									 	<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
 										
 										<a href="${ pageContext.request.contextPath }/question_findQuestionListByLessonId.action?LessonId=<s:property value="#u.LessonId"/>">
 										<s:property value="#u.Title" />
 										</a>
 										</td>
+										
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%"><s:property value="#u.Index" /></td>
 										

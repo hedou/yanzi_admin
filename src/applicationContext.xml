@@ -119,6 +119,7 @@
 	
 	
 	<bean name="levelAction" class="com.ssh.level.action.LevelAction">
+	    <property name="courseService" ref="courseService"></property>
 		<property name="levelService" ref="levelService"></property>
 	</bean>
 	<bean name="levelService" class="com.ssh.level.service.impl.LevelServiceImpl">

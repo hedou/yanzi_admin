@@ -38,19 +38,12 @@
 			<result name="edit">/pages/question/edit.jsp</result>
 		</action>
 		
+		<action name="level_*" class="levelAction" method="{1}">
+			<result name="levelList">/pages/level/list.jsp</result>
+			<result name="edit">/pages/level/edit.jsp</result>
+			<result name="courseList2">/pages/level/list2.jsp</result>
+		</action>
 
 	</package>
 </struts>
-
-
-
-
-
-
-
-
-
-
-
-
 

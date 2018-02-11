@@ -2,6 +2,7 @@
     <wb-module deploy-name="yanzi_admin">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/build/classes"/>
         <property name="context-root" value="yanzi_admin"/>
         <property name="java-output-path" value="/yanzi_admin/build/classes"/>
     </wb-module>
