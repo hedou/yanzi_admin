@@ -2,6 +2,8 @@ package com.ssh.lesson.action;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -76,7 +78,8 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 	  {
 		 
 		lesson = lessonService.findLessonById(lesson.getLessonId());
-	    
+		HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("lessonValid", lesson.getValid());
 	    return "edit";
 	  }
 	

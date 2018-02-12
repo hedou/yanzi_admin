@@ -2,6 +2,8 @@ package com.ssh.question.action;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -70,7 +72,8 @@ public class QuestionAction extends ActionSupport implements ModelDriven<Questio
 	  {
 		 
 		question = questionService.findQuestionById(question.getQuestionId());
-	    
+		HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("questionValid", question.getValid());
 	    return "edit";
 	  }
 	

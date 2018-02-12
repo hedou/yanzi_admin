@@ -4,6 +4,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -92,7 +94,8 @@ public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 	 public String edit()
 	  {
 	    level = levelService.findLevelById(level.getLevelId());
-	   
+	    HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("levelValid", level.getValid());
 	    return "edit";
 	  }
 	
@@ -117,7 +120,4 @@ public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 		return "levelList";
 		
 	  }
-	
-	
-	 
 }

@@ -1,7 +1,11 @@
 package com.ssh.term.action;
 
-import java.util.List;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
 
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
 
@@ -34,7 +38,7 @@ public class TermAction extends ActionSupport implements ModelDriven<Term> {
 		this.courseService = courseService;
 	}
 
-	//½ÓÊÕcourseId
+	//ï¿½ï¿½ï¿½ï¿½courseId
 	private int CourseId;
 	public void setCourseId(int courseId) {
 		CourseId = courseId;
@@ -64,6 +68,8 @@ public class TermAction extends ActionSupport implements ModelDriven<Term> {
 	 public String edit()
 	  {
 	    term = termService.findTermById(term.getT_Id());
+	    HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("termValid", term.getValid());
 	    return "edit";
 	  }
 	

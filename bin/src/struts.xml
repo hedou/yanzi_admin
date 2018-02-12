@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="ssh" namespace="/" extends="struts-default">
+
+		<action name="adminUser_*" class="adminUserAction" method="{1}">
+			<result name="loginFail">/pages/admin/index.jsp</result>
+		 <result name="loginSuccess">/pages/admin/home.jsp</result>
+		
+		</action>
+		
+		<action name="course_*" class="courseAction" method="{1}">
+			<result name="courseList">/pages/course/list.jsp</result>
+			<result name="edit">/pages/course/edit.jsp</result>
+			<result name="deleteSuccess" type="redirect">course_findCourseListByPage.action?currentPage=1</result>
+			<result name="updateSuccess" type="redirect">course_findCourseListByPage.action?currentPage=1
+			</result>
+			<result name="addSuccess" type="redirect">course_findCourseListByPage.action?currentPage=1
+			</result>
+		</action>
+		
+		<action name="term_*" class="termAction" method="{1}">
+			<result name="termList">/pages/term/list.jsp</result>
+			<result name="edit">/pages/term/edit.jsp</result>
+			
+		</action>
+		
+		
+		<action name="lesson_*" class="lessonAction" method="{1}">
+			<result name="lessonList">/pages/lesson/list.jsp</result>
+			<result name="edit">/pages/lesson/edit.jsp</result>
+		</action>
+		
+		<action name="question_*" class="questionAction" method="{1}">
+			<result name="questionList">/pages/question/list.jsp</result>
+			<result name="edit">/pages/question/edit.jsp</result>
+		</action>
+		
+		<action name="level_*" class="levelAction" method="{1}">
+			<result name="levelList">/pages/level/list.jsp</result>
+			<result name="edit">/pages/level/edit.jsp</result>
+			<result name="courseList2">/pages/level/list2.jsp</result>
+		</action>
+
+	</package>
+</struts>

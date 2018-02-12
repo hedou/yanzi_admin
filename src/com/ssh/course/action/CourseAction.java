@@ -1,5 +1,9 @@
 package com.ssh.course.action;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
 
 
@@ -23,14 +27,14 @@ public class CourseAction extends ActionSupport implements ModelDriven<Course> {
 		this.courseService = courseService;
 	}
 	
-	//½ÓÊÕcurrentPage
+	//ï¿½ï¿½ï¿½ï¿½currentPage
     private int currentPage;
 	public void setCurrentPage(int currentPage) {
 		this.currentPage = currentPage;
 	}
 	
 	public String findCourseListByPage(){	 
-		 //·ÖÒ³·µ»ØpageBean
+		 //ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½pageBean
 	    PageBean<Course> pageBean = courseService.findCourseListByPage(currentPage);
   
 	    ActionContext.getContext().getValueStack().set("pageBean", pageBean);
@@ -47,6 +51,8 @@ public class CourseAction extends ActionSupport implements ModelDriven<Course> {
 	 public String edit()
 	  {
 	    course = courseService.findCourseById(course.getCourseId());
+	    HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("courseValid", course.getValid());
 	    return "edit";
 	  }
 	 
