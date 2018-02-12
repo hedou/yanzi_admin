@@ -68,8 +68,9 @@ public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 		
 	    List<Level> levelList = levelService.findLevelListByCourseId(CourseId);	    
 	    ActionContext.getContext().getValueStack().set("levelList", levelList);	
-	    ServletActionContext.getRequest().getSession().setAttribute("CourseId", CourseId);	
-	    PageBean<Course> pageBean = courseService.findCourseListByPage(currentPage);
+	    ServletActionContext.getRequest().getSession().setAttribute("CourseId", CourseId);
+	    
+	    PageBean<Level> pageBean = levelService.findLevelListByPage(currentPage);
 		  
 		 ActionContext.getContext().getValueStack().set("pageBean", pageBean);
 		return "levelList";	
@@ -82,20 +83,16 @@ public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 		levelService.addLevel(level);	
 		List<Level> levelList = levelService.findLevelListByCourseId(CourseId);	    
 		ActionContext.getContext().getValueStack().set("levelList", levelList);
-		System.out.println(levelList);
 		return "levelList";
 		
 	}
 	
-//	public String add(){
-//		
-//		levelService.add(level);
-//		return "addSuccess";
-//	}
+
 	
 	 public String edit()
 	  {
 	    level = levelService.findLevelById(level.getLevelId());
+	   
 	    return "edit";
 	  }
 	
