@@ -91,22 +91,6 @@
 						</table>
 					</td>
 				</tr>
-				<%-- <tr align="center">
-					<td colspan="7">第<s:property value="pageBean.currentPage" />/<s:property
-							value="pageBean.totalPage" />页 <s:if
-							test="pageBean.currentPage != 1">
-							<a
-								href="${ pageContext.request.contextPath }/level_findLevelListByPage.action?currentPage=1">首页</a>|
-								<a
-								href="${ pageContext.request.contextPath }/level_findLevelListByPage.action?currentPage=<s:property value="pageBean.currentPage-1"/>">上一页</a>|
-							</s:if> <s:if test="pageBean.currentPage != pageBean.totalPage">
-							<a
-								href="${ pageContext.request.contextPath }/level_findLevelListByPage.action?currentPage=<s:property value="pageBean.currentPage+1"/>">下一页</a>|
-								<a
-								href="${ pageContext.request.contextPath }/level_findLevelListByPage.action?currentPage=<s:property value="pageBean.totalPage"/>">尾页</a>|
-							</s:if>
-					</td>
-				</tr> --%>
 			</TBODY>
 		</table>
 	</form>

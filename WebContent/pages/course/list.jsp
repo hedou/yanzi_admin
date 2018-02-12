@@ -94,7 +94,7 @@
 							<a
 								href="${ pageContext.request.contextPath }/course_findCourseListByPage.action?currentPage=1">首页</a>|
 								<a
-								href="${ pageContext.request.contextPath }/courseadmin_findCourseListByPage.action?currentPage=<s:property value="pageBean.currentPage-1"/>">上一页</a>|
+								href="${ pageContext.request.contextPath }/cours_findCourseListByPage.action?currentPage=<s:property value="pageBean.currentPage-1"/>">上一页</a>|
 							</s:if> <s:if test="pageBean.currentPage != pageBean.totalPage">
 							<a
 								href="${ pageContext.request.contextPath }/course_findCourseListByPage.action?currentPage=<s:property value="pageBean.currentPage+1"/>">下一页</a>|
