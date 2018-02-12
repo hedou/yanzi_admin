@@ -2,8 +2,8 @@
 
 # Package Files #
 *.war
-*/build/
+build/
 
-*/.classpath
-*/.project
-*/.settings
+.classpath
+.settings
+.project
