@@ -3,6 +3,7 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+	<constant name="struts.multipart.maxSize" value="1000000000"/>
 	<package name="ssh" namespace="/" extends="struts-default">
 
 		<action name="adminUser_*" class="adminUserAction" method="{1}">
@@ -12,6 +13,7 @@
 		</action>
 		
 		<action name="course_*" class="courseAction" method="{1}">
+			<param name="savePath">/upload</param>
 			<result name="courseList">/pages/course/list.jsp</result>
 			<result name="edit">/pages/course/edit.jsp</result>
 			<result name="deleteSuccess" type="redirect">course_findCourseListByPage.action?currentPage=1</result>
@@ -19,7 +21,7 @@
 			</result>
 			<result name="addSuccess" type="redirect">course_findCourseListByPage.action?currentPage=1
 			</result>
-		</action>
+		</action>	
 		
 		<action name="term_*" class="termAction" method="{1}">
 			<result name="termList">/pages/term/list.jsp</result>

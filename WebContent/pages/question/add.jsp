@@ -6,9 +6,26 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <LINK href="${pageContext.request.contextPath}/pages/css/Style1.css"
 	type="text/css" rel="stylesheet">
+<script type="text/javascript" src="${pageContext.request.contextPath}/pages/js/jquery-1.8.0.min.js"
 </HEAD>
 
 <body>
+	<div width="30%" style="float:left" >
+		<table cellSpacing="1" cellPadding="5" width="100%" align="center"
+			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
+			<tr>
+				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
+					height="26"><strong><STRONG>添加问题图片</STRONG> </strong></td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="输入标题" /></td>
+				<td><input type="text" placeholder="上传图片"/></td>
+			 </tr>
+		 	<tr><td><input type="button" value="上传" /></td></tr>
+		 </table>
+	</div>
+
+	<div width="70%" height="100%" style="float:right">
 	<form id="userAction_save_do" name="Form1"
 		action="${pageContext.request.contextPath}/question_addQuestion.action"
 		method="post">
@@ -86,5 +103,9 @@
 			</tr>
 		</table>
 	</form>
+	</div>
 </body>
+<script type="text/javascript">
+
+</script>
 </HTML>
