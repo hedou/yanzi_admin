@@ -1,5 +1,6 @@
 package com.ssh.course.domain;
 
+import java.io.File;
 import java.sql.Timestamp;
 
 
@@ -12,7 +13,37 @@ public class Course {
 	private Integer Valid;
 	private Timestamp AddTime;
 	private Timestamp UpdateTime;
+	// �����ļ���Ŀ¼·��(ͨ������ע��)
+	private File upload;
+	private String uploadFileName;
+	private String uploadContentType;
+    private String savePath;  
 
+    
+	public File getUpload() {
+		return upload;
+	}
+	public void setUpload(File upload) {
+		this.upload = upload;
+	}
+	public String getUploadFileName() {
+		return uploadFileName;
+	}
+	public void setUploadFileName(String uploadFileName) {
+		this.uploadFileName = uploadFileName;
+	}
+	public String getUploadContentType() {
+		return uploadContentType;
+	}
+	public void setUploadContentType(String uploadContentType) {
+		this.uploadContentType = uploadContentType;
+	}
+	public String getSavePath() {
+		return savePath;
+	}
+	public void setSavePath(String savePath) {
+		this.savePath = savePath;
+	}
 	public Integer getCourseId() {
 		return CourseId;
 	}
