@@ -35,7 +35,7 @@ public class LevelDaoImpl extends HibernateDaoSupport implements LevelDao{
 	@Override
 	public Level findLevelById(Integer levelId) {
 		// TODO Auto-generated method stub
-		String hql = "from Term where t_id = ?";
+		String hql = "from Level where LevelId = ?";
 		List<Level> list = (List<Level>) this.getHibernateTemplate().find(hql, levelId);
 
 		if (list!=null && list.size()>0) {

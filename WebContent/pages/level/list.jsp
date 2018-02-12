@@ -36,7 +36,7 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
 								<td align="center" width="7%">LevelId</td>
-								<td align="center" width="10%">courseId</td>
+								<td align="center" width="10%">Title</td>
 								<td align="center" width="10%">Level</td>
 								<td align="center" width="25%">Image</td>
                                 <td align="center" width="10%">MinExp</td>
@@ -54,7 +54,7 @@
 										width="3%"><s:property value="#u.LevelId" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
-												<s:property value="#u.course.CourseId" />
+												<s:property value="#u.course.Title" />
 										</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.Level" /></td>
@@ -74,14 +74,14 @@
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="15%"><s:property value="#u.UpdateTime" /></td>
 									<td align="center" style="HEIGHT: 22px"><a
-										href="${ pageContext.request.contextPath }/level_edit.action?id=<s:property value="#u.LevelId"/>">
+										href="${ pageContext.request.contextPath }/level_edit.action?LevelId=<s:property value="#u.LevelId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_edit.gif"
 											border="0" style="CURSOR: hand">
 									</a></td>
 
 									<td align="center" style="HEIGHT: 22px"><a
-										href="${ pageContext.request.contextPath }/level_delete.action?id=<s:property value="#u.LevelId"/>">
+										href="${ pageContext.request.contextPath }/level_delete.action?LevelId=<s:property value="#u.LevelId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">
@@ -98,7 +98,7 @@
 							<a
 								href="${ pageContext.request.contextPath }/level_findLevelListByPage.action?currentPage=1">首页</a>|
 								<a
-								href="${ pageContext.request.contextPath }/courseadmin_findLevelListByPage.action?currentPage=<s:property value="pageBean.currentPage-1"/>">上一页</a>|
+								href="${ pageContext.request.contextPath }/level_findLevelListByPage.action?currentPage=<s:property value="pageBean.currentPage-1"/>">上一页</a>|
 							</s:if> <s:if test="pageBean.currentPage != pageBean.totalPage">
 							<a
 								href="${ pageContext.request.contextPath }/level_findLevelListByPage.action?currentPage=<s:property value="pageBean.currentPage+1"/>">下一页</a>|

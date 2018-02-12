@@ -21,14 +21,14 @@
 					height="26"><strong><STRONG>编辑勋章</STRONG> </strong></td>
 			</tr>
 
-			<tr>
+			<%-- <tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					course：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
-					name="course" value="<s:property value="model.course"/>" />
+					name="course" value="<s:property value="model.course.Title"/>" />
 				</td>
 
-			</tr>
+			</tr> --%>
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
