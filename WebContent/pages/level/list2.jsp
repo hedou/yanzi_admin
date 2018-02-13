@@ -61,7 +61,7 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.EnTitle" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="25%"><s:property value="#u.Image" /></td>
+										width="25%"><img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />"></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
 										<s:property value="#u.Valid" />
 									</td>
@@ -69,19 +69,7 @@
 										width="15%"><s:property value="#u.AddTime" /></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="15%"><s:property value="#u.UpdateTime" /></td>
-									<%-- <td align="center" style="HEIGHT: 22px"><a
-										href="${ pageContext.request.contextPath }/course_edit.action?id=<s:property value="#u.id"/>">
-											<img
-											src="${pageContext.request.contextPath}/pages/images/i_edit.gif"
-											border="0" style="CURSOR: hand">
-									</a></td>
-
-									<td align="center" style="HEIGHT: 22px"><a
-										href="${ pageContext.request.contextPath }/course_delete.action?id=<s:property value="#u.id"/>">
-											<img
-											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
-											width="16" height="16" border="0" style="CURSOR: hand">
-									</a></td> --%>
+								
 								</tr>
 							</s:iterator>
 						</table>

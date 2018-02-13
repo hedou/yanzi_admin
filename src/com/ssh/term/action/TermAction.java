@@ -75,7 +75,7 @@ public class TermAction extends ActionSupport implements ModelDriven<Term> {
             String oldName = term.getUploadFileName();
             String suffix = oldName.substring(oldName.lastIndexOf("."));
 //            System.out.println(ImageUploadSource.CURRICULUM_IMAGE.getPrefix());
-			String image = new UploadImage().upload(ImageUploadSource.CURRICULUM_IMAGE.getPrefix(), dstPath, suffix);
+			String image = new UploadImage().upload(ImageUploadSource.TERM_IMAGE.getPrefix(), dstPath, suffix);
 			
 			term.setImage(image);
 		

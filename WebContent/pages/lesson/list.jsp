@@ -70,21 +70,24 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%"><s:property value="#u.Index" /></td>
 										
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.Image" /></td>
+									<td style="CURSOR: hand; HEIGHT: 22px;"  align="center"
+										width="10%">
+										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />">
+										
+										</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.PrimerTitle" /></td>
-										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.PrimerBrief" /></td>
-										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.PrimerImage" /></td>
-										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.PrimerContent" /></td>	
 										
-										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.SummaryImage" /></td>
 							
-										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.SummaryContent" /></td>
 																					
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
