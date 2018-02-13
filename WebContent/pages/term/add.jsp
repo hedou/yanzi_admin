@@ -40,6 +40,14 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					学期：</td>
+				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
+					name="term" value="" />
+				</td>
+
+			</tr>
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="file" style="height: 40px; width: 700px;"
 					name="upload" value="" />

@@ -34,9 +34,10 @@
 							style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
-
-								<td align="center" width="2%">ID</td>
+<!-- 
+								<td align="center" width="2%">ID</td> -->
 								<td align="center" width="10%">Title</td>
+								<td align="center" width="2%">Term</td>
 								<td align="center" width="10%">Brief</td>
 								<td align="center" width="4%">Index</td>
 								<td align="center" width="5%">Price</td>
@@ -54,9 +55,9 @@
 							<s:iterator var="u" value="termList" status="status">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<%-- <td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%"><s:property value="#u.t_Id" />
-									</td>
+									</td> --%>
 						
 								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
@@ -65,7 +66,9 @@
 										<s:property value="#u.Title" />
 										</a>
 										</td>
-									
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="3%"><s:property value="#u.term" />
+									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.Brief" />
 									</td>

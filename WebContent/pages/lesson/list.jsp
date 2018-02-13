@@ -14,6 +14,7 @@
 	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/pages/lesson/add.jsp">
 	<input type="button" name="test" value="添加"/></a>
 	</div>
+	<div style="width:1400px">
 	<form id="Form1" name="Form1"
 		action=""
 		method="post">
@@ -34,16 +35,17 @@
 							style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
-
-								<td align="center" width="1%">LessonId</td>
+<!-- 
+								<td align="center" width="1%">LessonId</td> -->
 								<td align="center" width="4%">Title</td>
+								<td align="center" width="7%">StartTime</td>
 								<td align="center" width="1%">Index</td>
-								<td align="center" width="10%">Image</td>
-								<td align="center" width="9%">PrimerTitle</td>
+								<td align="center" width="6%">Image</td>
+								<td align="center" width="4%">PrimerTitle</td>
 								<td align="center" width="9%">PrimerBrief</td>
-								<td align="center" width="9%">PrimerImage</td>
+								<td align="center" width="6%">PrimerImage</td>
 								<td align="center" width="9%">PrimerContent</td>
-								<td align="center" width="9%">SummaryImage</td>
+								<td align="center" width="6%">SummaryImage</td>
 								<td align="center" width="9%">SummaryContent</td>
 								<td align="center" width="1%">Valid</td>
 								<td align="center" width="7%">AddTime</td>
@@ -55,10 +57,10 @@
 							<s:iterator var="u" value="lessonList" status="status">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<%-- <td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%">
 										<s:property value="#u.LessonId" />
-										</td>
+										</td> --%>
 									 	<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
 										
@@ -66,23 +68,24 @@
 										<s:property value="#u.Title" />
 										</a>
 										</td>
-										
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="7%"><s:property value="#u.StartTime" /></td>	
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%"><s:property value="#u.Index" /></td>
 										
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.Image" /></td>
+										width="6%"><s:property value="#u.Image" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.PrimerTitle" /></td>
+										width="6%"><s:property value="#u.PrimerTitle" /></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.PrimerBrief" /></td>
+										width="6%"><s:property value="#u.PrimerBrief" /></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.PrimerImage" /></td>
+										width="6%"><s:property value="#u.PrimerImage" /></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.PrimerContent" /></td>	
 										
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.SummaryImage" /></td>
+										width="6%"><s:property value="#u.SummaryImage" /></td>
 							
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.SummaryContent" /></td>
@@ -117,6 +120,7 @@
 			</TBODY>
 		</table>
 	</form>
+	</div>
 </body>
 </HTML>
 

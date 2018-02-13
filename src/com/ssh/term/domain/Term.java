@@ -20,7 +20,7 @@ public class Term {
 	private Integer Valid;
 	private Timestamp AddTime;
 	private Timestamp UpdateTime;
-	
+	private Integer term;//课程第几期
 	private Course course;
 
 	private File upload;
@@ -174,6 +174,14 @@ public class Term {
 
 	public void setCourse(Course course) {
 		this.course = course;
+	}
+
+	public Integer getTerm() {
+		return term;
+	}
+
+	public void setTerm(Integer term) {
+		this.term = term;
 	}
 	
 
