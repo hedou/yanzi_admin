@@ -15,8 +15,8 @@ public enum ImageUploadSource {
     LESSON_BACKGROUD_IMAGE(9, "curriculum/lessonbackgroud/image/"),
     LEVEL_IMAGE(11, "curriculum/level/image/"),
     QUESTION_ANSWER_IMAGE(11, "curriculum/questinanswer/image/"),
-    SHARE_CURRICULUM(12, "share/curriculum/image/");
-
+    SHARE_CURRICULUM(12, "share/curriculum/image/"),
+    TERM_IMAGE(13, "curriculum/term/image/");
     private int source;
     private String prefix;
 

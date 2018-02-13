@@ -59,7 +59,7 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.Level" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="25%"><s:property value="#u.Image" /></td>
+										width="25%"><img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />"></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
 										<s:property value="#u.MinExp" />
 									</td>	

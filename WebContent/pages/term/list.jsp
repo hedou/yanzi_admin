@@ -90,7 +90,7 @@
 									</td>
 									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="10%">
-										<s:property value="#u.Image" />
+										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />">
 									</td>
 									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
