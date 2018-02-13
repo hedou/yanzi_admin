@@ -46,35 +46,6 @@
 					name="upload" value=""/>
 				</td>
 			</tr>
-			
-			<%-- <tr>
-				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="Valid"
-					value="" /></td>
-
-			</tr>
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="AddTime"
-					value="" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="UpdateTime"
-					value="<s:property value=""/>" /></td>
-
-			</tr> --%>
-			
-
-
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"
 					bgColor="#f5fafe" colSpan="4">

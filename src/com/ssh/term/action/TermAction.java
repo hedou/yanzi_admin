@@ -2,6 +2,8 @@ package com.ssh.term.action;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -16,6 +18,9 @@ import com.ssh.course.domain.Course;
 import com.ssh.course.service.CourseService;
 import com.ssh.term.domain.Term;
 import com.ssh.term.service.TermService;
+import com.ssh.utils.CopyImage;
+import com.ssh.utils.ImageUploadSource;
+import com.ssh.utils.UploadImage;
 
 
 public class TermAction extends ActionSupport implements ModelDriven<Term> {
@@ -54,9 +59,26 @@ public class TermAction extends ActionSupport implements ModelDriven<Term> {
 		return "termList";	
 	}
 	
-	public String addTerm(){
+	public String addTerm() throws IOException{
 		int courseid = (int)ActionContext.getContext().getSession().get("CourseId");
 		Course course = courseService.findCourseById(courseid);
+		
+		File srcFile = term.getUpload();
+		String path = ServletActionContext.getServletContext().getRealPath(term.getSavePath());
+		File file = new File(path);
+		if(!file.exists()){
+			file.mkdir();
+		}
+            String dstPath = path + "\\"+term.getUploadFileName();  
+            File dstFile = new File(dstPath);  
+            new CopyImage().copy(srcFile, dstFile);
+            String oldName = term.getUploadFileName();
+            String suffix = oldName.substring(oldName.lastIndexOf("."));
+//            System.out.println(ImageUploadSource.CURRICULUM_IMAGE.getPrefix());
+			String image = new UploadImage().upload(ImageUploadSource.CURRICULUM_IMAGE.getPrefix(), dstPath, suffix);
+			
+			term.setImage(image);
+		
 		term.setCourse(course);
 		termService.addTerm(term);	
 		List<Term> termList = termService.findTermListByCourseId(CourseId);	    

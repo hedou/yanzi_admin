@@ -49,12 +49,9 @@ public class QuestionAction extends ActionSupport implements ModelDriven<Questio
 	
 	public String addQuestion(){
 		
-		int LessonId = (int)ActionContext.getContext().getSession().get("LessonId");
-		
+		int LessonId = (int)ActionContext.getContext().getSession().get("LessonId");	
 		Lesson lesson = lessonService.findLessonById(LessonId);
-		
-		question.setLesson(lesson);
-		
+		question.setLesson(lesson);	
 		questionService.addQuestion(question);
 		
 		List<Question>  questions =  questionService.findQuestionListByLessonId(LessonId);

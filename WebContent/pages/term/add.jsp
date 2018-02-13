@@ -11,7 +11,7 @@
 <body>
 	<form id="userAction_save_do" name="Form1"
 		action="${pageContext.request.contextPath}/term_addTerm.action"
-		method="post">
+		method="post" enctype="multipart/form-data">
 		
 		
 		
@@ -41,8 +41,8 @@
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image：</td>
-				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="Image" value="" />
+				<td class="ta_01" bgColor="#ffffff"><input type="file" style="height: 40px; width: 700px;"
+					name="upload" value="" />
 				</td>
 
 			</tr>
@@ -73,74 +73,35 @@
 					 type="text" name="Price"
 					value="" /></td>
 
-			</tr>
-			
-			
+			</tr>		
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Discount</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Discount"
 					value="" /></td>
-
-			</tr>
-			
-
-			<!-- <tr>
-				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="Valid"
-					value="" /></td>
-
-			</tr> -->
-			
+			</tr>			
 				<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					StartTime</td>
 				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="StartTime"
+					 type="datetime-local" name="StartTime"
 					value="" /></td>
-
 			</tr>
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					EndTime</td>
 				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="EndTime"
+					 type="datetime-local" name="EndTime"
 					value="<s:property value=""/>" /></td>
-
 			</tr>
-			
-			
-			<%-- <tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="AddTime"
-					value="" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="UpdateTime"
-					value="<s:property value=""/>" /></td>
-
-			</tr> --%>
-			
-
-
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"
 					bgColor="#f5fafe" colSpan="4">
 					<button type="submit" value="确定"
 						class="button_ok">&#30830;&#23450;</button> <FONT face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT>
 					<button type="reset" value="重置" class="button_cancel">&#37325;&#32622;</button>
-
 					<FONT face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT> <INPUT
 					class="button_ok" type="button" onclick="history.go(-1)" value="返回" />
 					<span id="Label1"></span>
