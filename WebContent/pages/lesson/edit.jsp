@@ -43,9 +43,12 @@
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+				<td class="ta_01" bgColor="#ffffff">
+				   <%-- <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
-					/></td>
+					/> --%>
+					<img alt="" style="height:50px; width:50px;" src="<s:property value="model.Image" />">
+				</td>
 			</tr>
 			
 			<tr>
@@ -77,9 +80,12 @@
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					PrimerImage</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+				<td class="ta_01" bgColor="#ffffff">
+				    <%-- <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.PrimerImage"/>"
-					/></td>
+					/> --%>
+					<img alt="" style="height:50px; width:50px;" src="<s:property value="model.PrimerImage" />">
+				</td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
@@ -91,9 +97,12 @@
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					SummaryImage</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+				<td class="ta_01" bgColor="#ffffff">
+				     <%--  <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.SummaryImage"/>"
-					/></td>
+					/> --%>
+					<img alt="" style="height:50px; width:50px;" src="<s:property value="model.SummaryImage" />">
+				</td>
 			</tr>
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"

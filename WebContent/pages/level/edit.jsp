@@ -36,11 +36,16 @@
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="Level" value="<s:property value="model.Level"/>"
 					/></td>
+			</tr>
+			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+				<td class="ta_01" bgColor="#ffffff">
+				   <%--  <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
-					/></td>
+					/> --%>
+					<img alt="" style="height:50px; width:50px;" src="<s:property value="model.Image" />">
+				</td>
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">

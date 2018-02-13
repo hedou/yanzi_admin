@@ -75,29 +75,34 @@
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+				<td class="ta_01" bgColor="#ffffff">
+				   <%--  <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
-					/></td>
+					/> --%>
+					<img alt="" style="height:50px; width:50px;" src="<s:property value="model.Image" />">
+				</td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					StartTime</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="datetime-local"
-					name="StartTime" value="<s:property value="model.StartTime.format('YYYY-MM-DDTHH:mm:ss')"/>"
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+					name="StartTime" value="<s:property value="model.StartTime"/>"
 					/></td>
 			</tr>
 				<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					EndTime</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="datetime-local"
-					name="EndTime" value="<s:property value="%{getText('{0,date,YYYY-MM-DDTHH:mm}',{model.EndTime})}"/>"
-					/></td>
+				<td class="ta_01" bgColor="#ffffff">
+				    <input style="height: 40px; width: 700px;" type="text"
+					name="EndTime"  value="<s:property value="model.EndTime"/>"
+					/>
+				</td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Index</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="Index" value="<s:property value="model.Index"/>"
+					name="Index" value=""
 					/></td>
 			</tr>
 			<tr>
