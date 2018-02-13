@@ -12,21 +12,18 @@
 	<form id="userAction_save_do" name="Form1"
 		action="${pageContext.request.contextPath}/lesson_update.action"
 		method="post">
-		
 		<table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
 			<tr>
 				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
 					height="26"><strong><STRONG>编辑关卡</STRONG> </strong></td>
 			</tr>
-
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Title：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"  style="height: 40px; width: 700px;"
 					name="Title" value="<s:property value="model.Title"/>" />
 				</td>
-
 			</tr>
 
 			<tr>
@@ -35,9 +32,7 @@
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="EnTitle" value="<s:property value="model.Index"/>"
 					/></td>
-				
 			</tr>
-			
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image</td>
@@ -49,9 +44,13 @@
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Valid</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="Valid"
-					value="<s:property value="model.Valid"/>" /></td>
+				<td bgColor="#ffffff" height="40%">
+					<select name="Valid" id="Valid">
+				      	<%String m=String.valueOf(request.getAttribute("lessonValid")); %>
+				    	<option value ="0" <%="0".equals(m)?"selected":"" %>>上线</option>
+  						<option value ="1" <%="1".equals(m)?"selected":"" %>>下线</option>
+				    </select>			
+				</td>
 
 			</tr>
 			<tr>
@@ -89,26 +88,6 @@
 					name="Image" value="<s:property value="model.SummaryImage"/>"
 					/></td>
 			</tr>
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="AddTime"
-					value="<s:property value="model.AddTime"/>" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="UpdateTime"
-					value="<s:property value="model.UpdateTime"/>" /></td>
-
-			</tr>
-			
-
-
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"
 					bgColor="#f5fafe" colSpan="4">

@@ -1,5 +1,6 @@
 package com.ssh.course.action;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 
 import org.apache.struts2.ServletActionContext;
@@ -54,6 +55,8 @@ public class CourseAction extends ActionSupport implements ModelDriven<Course> {
 	 public String edit()
 	  {
 	    course = courseService.findCourseById(course.getCourseId());
+	    HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("courseValid", course.getValid());
 	    return "edit";
 	  }
 	 

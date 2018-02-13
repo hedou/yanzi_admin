@@ -36,7 +36,7 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
 								<td align="center" width="1%">LessonId</td>
-								<td align="center" width="7%">Title</td>
+								<td align="center" width="4%">Title</td>
 								<td align="center" width="1%">Index</td>
 								<td align="center" width="10%">Image</td>
 								<td align="center" width="9%">PrimerTitle</td>

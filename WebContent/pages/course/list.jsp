@@ -70,14 +70,14 @@
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="15%"><s:property value="#u.UpdateTime" /></td>
 									<td align="center" style="HEIGHT: 22px"><a
-										href="${ pageContext.request.contextPath }/course_edit.action?id=<s:property value="#u.id"/>">
+										href="${ pageContext.request.contextPath }/course_edit.action?CourseId=<s:property value="#u.CourseId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_edit.gif"
 											border="0" style="CURSOR: hand">
 									</a></td>
 
 									<td align="center" style="HEIGHT: 22px"><a
-										href="${ pageContext.request.contextPath }/course_delete.action?id=<s:property value="#u.id"/>">
+										href="${ pageContext.request.contextPath }/course_delete.action?CourseId=<s:property value="#u.CourseId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">
@@ -94,7 +94,7 @@
 							<a
 								href="${ pageContext.request.contextPath }/course_findCourseListByPage.action?currentPage=1">首页</a>|
 								<a
-								href="${ pageContext.request.contextPath }/courseadmin_findCourseListByPage.action?currentPage=<s:property value="pageBean.currentPage-1"/>">上一页</a>|
+								href="${ pageContext.request.contextPath }/course_findCourseListByPage.action?currentPage=<s:property value="pageBean.currentPage-1"/>">上一页</a>|
 							</s:if> <s:if test="pageBean.currentPage != pageBean.totalPage">
 							<a
 								href="${ pageContext.request.contextPath }/course_findCourseListByPage.action?currentPage=<s:property value="pageBean.currentPage+1"/>">下一页</a>|

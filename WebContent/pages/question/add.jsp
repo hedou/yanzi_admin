@@ -62,7 +62,7 @@
 				</td>
 			</tr>
 			
-			<tr>
+			<%-- <tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Valid：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" 
@@ -87,7 +87,7 @@
 					value="<s:property value=""/>" /></td>
 
 			</tr>
-			
+			 --%>
 					
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">

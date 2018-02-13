@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.ssh.course.domain.Course" table="Course">
+	<class name="com.ssh.course.domain.Course" table="Course" dynamic-insert="true" dynamic-update="true">
 
 		<id name="CourseId" column="CourseId">
 			<generator class="native"></generator>

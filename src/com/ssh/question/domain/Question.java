@@ -1,5 +1,6 @@
 package com.ssh.question.domain;
 
+import java.io.File;
 import java.sql.Timestamp;
 
 import com.ssh.lesson.domain.Lesson;
@@ -10,9 +11,11 @@ public class Question {
 	private Integer Valid;
 	private Lesson lesson;
 	private Integer Index;
-	private Integer CorrectId;
-	
+	private Integer CorrectId;	
 	private Timestamp AddTime;
+	
+
+	
 	public Timestamp getAddTime() {
 		return AddTime;
 	}

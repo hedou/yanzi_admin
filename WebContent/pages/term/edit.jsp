@@ -1,5 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <HTML>
 <HEAD>
 <meta http-equiv="Content-Language" content="zh-cn">
@@ -7,7 +8,9 @@
 <LINK href="${pageContext.request.contextPath}/pages/css/Style1.css"
 	type="text/css" rel="stylesheet">
 </HEAD>
+<script type="text/javascript">
 
+	</script>
 <body>
 	<form id="userAction_save_do" name="Form1"
 		action="${pageContext.request.contextPath}/term_update.action"
@@ -20,7 +23,6 @@
 				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
 					height="26"><strong><STRONG>编辑学期</STRONG> </strong></td>
 			</tr>
-
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Title：</td>
@@ -71,15 +73,15 @@
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					StartTime</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="StartTime" value="<s:property value="model.StartTime"/>"
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="datetime-local"
+					name="StartTime" value="<s:property value="model.StartTime.format('YYYY-MM-DDTHH:mm:ss')"/>"
 					/></td>
 			</tr>
 				<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					EndTime</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="EndTime" value="<s:property value="model.EndTime"/>"
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="datetime-local"
+					name="EndTime" value="<s:property value="%{getText('{0,date,YYYY-MM-DDTHH:mm:ss}',{model.EndTime})}"/>"
 					/></td>
 			</tr>
 			<tr>
@@ -89,35 +91,17 @@
 					name="Index" value="<s:property value="model.Index"/>"
 					/></td>
 			</tr>
-			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Valid</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="Valid"
-					value="<s:property value="model.Valid"/>" /></td>
-
+				<td bgColor="#ffffff" height="40%">
+				    <select name="Valid" id="Valid">
+				      	<%String m=String.valueOf(request.getAttribute("termValid")); %>
+				    	<option value ="0" <%="0".equals(m)?"selected":"" %>>上线</option>
+  						<option value ="1" <%="1".equals(m)?"selected":"" %>>下线</option>
+				    </select>
+				</td>
 			</tr>
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="AddTime"
-					value="<s:property value="model.AddTime"/>" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="UpdateTime"
-					value="<s:property value="model.UpdateTime"/>" /></td>
-
-			</tr>
-			
-
-
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"
 					bgColor="#f5fafe" colSpan="4">

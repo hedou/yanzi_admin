@@ -1,5 +1,6 @@
 package com.ssh.level.domain;
 
+import java.io.File;
 import java.sql.Timestamp;
 
 import com.ssh.course.domain.Course;
@@ -17,8 +18,35 @@ public class Level {
 	private Timestamp AddTime;
 	private Timestamp UpdateTime;
 	
-
+	private File upload;
+	private String uploadFileName;
+	private String uploadContentType;
+    private String savePath; 
 	
+	public File getUpload() {
+		return upload;
+	}
+	public void setUpload(File upload) {
+		this.upload = upload;
+	}
+	public String getUploadFileName() {
+		return uploadFileName;
+	}
+	public void setUploadFileName(String uploadFileName) {
+		this.uploadFileName = uploadFileName;
+	}
+	public String getUploadContentType() {
+		return uploadContentType;
+	}
+	public void setUploadContentType(String uploadContentType) {
+		this.uploadContentType = uploadContentType;
+	}
+	public String getSavePath() {
+		return savePath;
+	}
+	public void setSavePath(String savePath) {
+		this.savePath = savePath;
+	}
 	public Integer getLevelId() {
 		return LevelId;
 	}

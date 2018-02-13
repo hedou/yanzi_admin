@@ -2,7 +2,11 @@ package com.ssh.level.action;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
 
@@ -17,7 +21,10 @@ import com.ssh.level.domain.Level;
 import com.ssh.level.service.LevelService;
 import com.ssh.term.domain.Term;
 import com.ssh.term.service.TermService;
+import com.ssh.utils.CopyImage;
+import com.ssh.utils.ImageUploadSource;
 import com.ssh.utils.PageBean;
+import com.ssh.utils.UploadImage;
 
 public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 
@@ -76,9 +83,26 @@ public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 		return "levelList";	
 	}
 	
-	public String addLevel(){
+	public String addLevel() throws IOException{
 		int courseid = (int)ActionContext.getContext().getSession().get("CourseId");
 		Course course = courseService.findCourseById(courseid);
+		
+		File srcFile = level.getUpload();
+		String path = ServletActionContext.getServletContext().getRealPath(level.getSavePath());
+		File file = new File(path);
+		if(!file.exists()){
+			file.mkdir();
+		}
+            String dstPath = path + "\\"+level.getUploadFileName();  
+            File dstFile = new File(dstPath);  
+            new CopyImage().copy(srcFile, dstFile);
+            String oldName = level.getUploadFileName();
+            String suffix = oldName.substring(oldName.lastIndexOf("."));
+//            System.out.println(ImageUploadSource.CURRICULUM_IMAGE.getPrefix());
+			String image = new UploadImage().upload(ImageUploadSource.CURRICULUM_IMAGE.getPrefix(), dstPath, suffix);
+			
+			level.setImage(image);
+		
 		level.setCourse(course);
 		levelService.addLevel(level);	
 		List<Level> levelList = levelService.findLevelListByCourseId(CourseId);	    
@@ -92,7 +116,8 @@ public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 	 public String edit()
 	  {
 	    level = levelService.findLevelById(level.getLevelId());
-	   
+	    HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("levelValid", level.getValid());
 	    return "edit";
 	  }
 	
@@ -117,7 +142,4 @@ public class LevelAction extends ActionSupport implements ModelDriven<Level> {
 		return "levelList";
 		
 	  }
-	
-	
-	 
 }

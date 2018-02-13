@@ -61,31 +61,14 @@
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Valid</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="Valid"
-					value="<s:property value="model.Valid"/>" /></td>
-
+				<td bgColor="#ffffff" height="40%">
+					<select name="Valid" id="Valid">
+				      	<%String m=String.valueOf(request.getAttribute("levelValid")); %>
+				    	<option value ="0" <%="0".equals(m)?"selected":"" %>>上线</option>
+  						<option value ="1" <%="1".equals(m)?"selected":"" %>>下线</option>
+				    </select>
+				</td>
 			</tr>
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="AddTime"
-					value="<s:property value="model.AddTime"/>" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="UpdateTime"
-					value="<s:property value="model.UpdateTime"/>" /></td>
-
-			</tr>
-			
-
-
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"
 					bgColor="#f5fafe" colSpan="4">

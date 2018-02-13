@@ -11,7 +11,7 @@
 <body>
 	<form id="userAction_save_do" name="Form1"
 		action="${pageContext.request.contextPath}/level_addLevel.action"
-		method="post">
+		method="post" enctype="multipart/form-data">
 	
 		<table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
@@ -42,8 +42,8 @@
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image</td>
 				<td class="ta_01" bgColor="#ffffff">
-				<input style="height: 40px; width: 700px;" type="text"
-					name="Image" value=""/>
+				<input style="height: 40px; width: 700px;" type="file"
+					name="upload" value=""/>
 				</td>
 			</tr>
 			<tr>
@@ -62,33 +62,6 @@
 				</td>
 				
 			</tr>
-			<tr>
-				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="Valid"
-					value="" /></td>
-
-			</tr>
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="AddTime"
-					value="" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="UpdateTime"
-					value="<s:property value=""/>" /></td>
-
-			</tr>
-			
-
 
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"

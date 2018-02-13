@@ -19,63 +19,40 @@
 				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
 					height="26"><strong><STRONG>编辑问题</STRONG> </strong></td>
 			</tr>
-
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Valid</td>
-				<td bgColor="#ffffff" height="40%"><input
+				<td bgColor="#ffffff" height="40%"><%-- <input
 					 type="text" name="Valid"
-					value="<s:property value="model.Valid"/>" /></td>
-
+					value="<s:property value="model.Valid"/>" /> --%>
+					<select name="Valid" id="Valid">
+				      	<%String m=String.valueOf(request.getAttribute("questionValid")); %>
+				    	<option value ="0" <%="0".equals(m)?"selected":"" %>>上线</option>
+  						<option value ="1" <%="1".equals(m)?"selected":"" %>>下线</option>
+				    </select>
+					</td>
 			</tr>
-			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Index</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Index"
 					value="<s:property value="model.Index"/>" /></td>
-
 			</tr>
-			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					CorrectId</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="CorrectId"
 					value="<s:property value="model.CorrectId"/>" /></td>
-
 			</tr>
-
 			<tr>
-				
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					JsonContent</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
 					name="JsonContent" value="<s:property value="model.JsonContent"/>"
 					/></td>
 			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="AddTime"
-					value="<s:property value="model.AddTime"/>" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="text" name="UpdateTime"
-					value="<s:property value="model.UpdateTime"/>" /></td>
-
-			</tr>
-			
-
-
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"
 					bgColor="#f5fafe" colSpan="4">

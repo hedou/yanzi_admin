@@ -1,6 +1,10 @@
 package com.ssh.lesson.action;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
 
@@ -11,7 +15,10 @@ import com.ssh.lesson.domain.Lesson;
 import com.ssh.lesson.service.LessonService;
 import com.ssh.term.domain.Term;
 import com.ssh.term.service.TermService;
+import com.ssh.utils.CopyImage;
+import com.ssh.utils.ImageUploadSource;
 import com.ssh.utils.PageBean;
+import com.ssh.utils.UploadImage;
 
 public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 
@@ -53,14 +60,28 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 		return "lessonList";
 	}
 	
-	public String addLesson(){
+	public String addLesson() throws IOException{
 		
 		int t_Id = (int)ActionContext.getContext().getSession().get("t_Id");
-		
 		Term term = termService.findTermById(t_Id);
 		
-		lesson.setTerm(term);
+		File srcFile = lesson.getUpload();
+		String path = ServletActionContext.getServletContext().getRealPath(lesson.getSavePath());
+		File file = new File(path);
+		if(!file.exists()){
+			file.mkdir();
+		}
+            String dstPath = path + "\\"+lesson.getUploadFileName();  
+            File dstFile = new File(dstPath);  
+            new CopyImage().copy(srcFile, dstFile);
+            String oldName = lesson.getUploadFileName();
+            String suffix = oldName.substring(oldName.lastIndexOf("."));
+//            System.out.println(ImageUploadSource.CURRICULUM_IMAGE.getPrefix());
+			String image = new UploadImage().upload(ImageUploadSource.CURRICULUM_IMAGE.getPrefix(), dstPath, suffix);
+			
+			lesson.setImage(image);
 		
+		lesson.setTerm(term);
 		lessonService.addLesson(lesson);
 		
 		List<Lesson> lesson =  lessonService.findLessonListByTermId(t_Id);
@@ -76,7 +97,8 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 	  {
 		 
 		lesson = lessonService.findLessonById(lesson.getLessonId());
-	    
+		HttpServletRequest request = ServletActionContext.getRequest();
+	    request.setAttribute("lessonValid", lesson.getValid());
 	    return "edit";
 	  }
 	
