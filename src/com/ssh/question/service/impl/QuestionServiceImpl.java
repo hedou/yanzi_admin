@@ -37,7 +37,8 @@ public class QuestionServiceImpl implements QuestionService{
 	}
 	@Override
 	public void delete(Question existquestion) {
-		questionDao.delete(existquestion);
+		existquestion.setValid(1);
+		questionDao.update(existquestion);
 		
 	}
 	

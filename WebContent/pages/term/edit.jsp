@@ -81,7 +81,7 @@
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					EndTime</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="datetime-local"
-					name="EndTime" value="<s:property value="%{getText('{0,date,YYYY-MM-DDTHH:mm:ss}',{model.EndTime})}"/>"
+					name="EndTime" value="<s:property value="%{getText('{0,date,YYYY-MM-DDTHH:mm}',{model.EndTime})}"/>"
 					/></td>
 			</tr>
 			<tr>

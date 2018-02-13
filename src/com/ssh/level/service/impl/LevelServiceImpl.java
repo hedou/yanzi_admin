@@ -47,8 +47,9 @@ public class LevelServiceImpl implements LevelService {
 
 	@Override
 	public void delete(Level existLevel) {
+		existLevel.setValid(1);
 		// TODO Auto-generated method stub
-		levelDao.delete(existLevel);
+		levelDao.update(existLevel);
 	}
 	@Override
 	public PageBean<Level> findLevelListByPage(int currentPage) {

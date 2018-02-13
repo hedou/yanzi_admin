@@ -50,7 +50,7 @@
 								<td align="center" width="6%">UpdateTime</td>
 								<td width="4%" align="center">编辑</td>
 								<td width="4%" align="center">删除</td>
-							</tr>w
+							</tr>
 							<s:iterator var="u" value="termList" status="status">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">

@@ -19,21 +19,21 @@ public class CourseServiseImpl implements CourseService {
 		this.courseDao = courseDao;
 	}
 	
-	//·ÖÒ³²éÕÒÐÂÎÅÁÐ±í
+	//ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
 	@Override
 	public PageBean<Course> findCourseListByPage(int currentPage) {
 		
 		PageBean<Course> pageBean = new PageBean<Course>();
 		
-		//Ã¿Ò³ÏÔÊ¾¼ÇÂ¼Êý
+		//Ã¿Ò³ï¿½ï¿½Ê¾ï¿½ï¿½Â¼ï¿½ï¿½
 		int pageSize = 4;
 		pageBean.setPageSize(pageSize);
-		//×Ü¹²¼ÇÂ¼Êý
+		//ï¿½Ü¹ï¿½ï¿½ï¿½Â¼ï¿½ï¿½
 		int totalCount = 0 ;
 		totalCount = courseDao.findCourseCount();
 		//System.out.println(totalCount);
 		pageBean.setTotalCount(totalCount);
-		//×ÜÒ³Êý
+		//ï¿½ï¿½Ò³ï¿½ï¿½
 		int totalPage=0;
 		if (totalCount % pageSize == 0) {
 			totalPage = totalCount / pageSize;
@@ -59,7 +59,8 @@ public class CourseServiseImpl implements CourseService {
 
 	@Override
 	public void delete(Course existCourse) {
-		courseDao.delete(existCourse);
+		existCourse.setValid(1);
+		courseDao.update(existCourse);
 		
 	}
 
