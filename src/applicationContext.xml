@@ -109,6 +109,8 @@
 		<property name="questionService" ref="qustionService"></property>
 		<property name="lessonService" ref="lessonService"></property>
 	</bean>
+	<bean name="uploadQuestionImageAction" class="com.ssh.question.action.UploadImageAction"> 
+	</bean>
 	<bean name="qustionService" class="com.ssh.question.service.impl.QuestionServiceImpl">
 		<property name="questionDao" ref="questionDao"></property>
 	</bean>

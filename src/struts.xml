@@ -45,6 +45,13 @@
 			<result name="edit">/pages/level/edit.jsp</result>
 			<result name="courseList2">/pages/level/list2.jsp</result>
 		</action>
-
+		<action name="questionImage" class="uploadQuestionImageAction" method="upload">
+       		 <param name="savePath">/upload</param>
+           <!--  <result type="json">
+                此处将reslut的值返回给客户端，root的值对应要返回的值的属性result
+                      注意：root为固定写法，否则不会把result的值返回给客户端
+                <param name="root">result</param>
+            </result> -->
+        </action>
 	</package>
 </struts>
