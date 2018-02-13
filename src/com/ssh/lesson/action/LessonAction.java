@@ -65,21 +65,36 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 		int t_Id = (int)ActionContext.getContext().getSession().get("t_Id");
 		Term term = termService.findTermById(t_Id);
 		
-		File srcFile = lesson.getUpload();
+		File[] srcFile = lesson.getUpload();//包含关卡简图，关卡封面图，关卡总结背景图
+		String[] fileName = lesson.getUploadFileName();
 		String path = ServletActionContext.getServletContext().getRealPath(lesson.getSavePath());
 		File file = new File(path);
 		if(!file.exists()){
 			file.mkdir();
 		}
-            String dstPath = path + "\\"+lesson.getUploadFileName();  
+		String[] serverImgPath = {ImageUploadSource.LESSON_IMAGE.getPrefix(),
+								ImageUploadSource.LESSON_BACKGROUD_IMAGE.getPrefix(),
+								ImageUploadSource.QUESTION_ANALYSIS_IMAGE.getPrefix()};
+		CopyImage copy = new CopyImage();
+		UploadImage upload = new UploadImage();
+		String dstPath = null;
+		for(int i=0;i<srcFile.length;i++){
+			dstPath = path + "\\"+fileName[i];  
             File dstFile = new File(dstPath);  
-            new CopyImage().copy(srcFile, dstFile);
-            String oldName = lesson.getUploadFileName();
+            copy.copy(srcFile[i], dstFile);
+            String oldName = fileName[i];
             String suffix = oldName.substring(oldName.lastIndexOf("."));
 //            System.out.println(ImageUploadSource.CURRICULUM_IMAGE.getPrefix());
-			String image = new UploadImage().upload(ImageUploadSource.CURRICULUM_IMAGE.getPrefix(), dstPath, suffix);
+			String message = upload.upload(serverImgPath[i], dstPath, suffix);
 			
-			lesson.setImage(image);
+			if(i == 0){
+				lesson.setImage(message);
+			}else if(i == 1){
+				lesson.setPrimerImage(message);
+			}else if(i == 2){
+				lesson.setSummaryImage(message);
+			}
+		}
 		
 		lesson.setTerm(term);
 		lessonService.addLesson(lesson);

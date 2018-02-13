@@ -27,7 +27,14 @@
 					name="Title" value="" />
 				</td>
 
-			</tr>		
+			</tr>	
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					开启时间：</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="datetime-local" name="StartTime"
+					value="" /></td>
+			</tr>	
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image</td>
@@ -63,8 +70,8 @@
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					PrimerImage</td>
 				<td class="ta_01" bgColor="#ffffff">
-				<input style="height: 40px; width: 700px;" type="text"
-					name="PrimerImage" value=""/>
+				<input style="height: 40px; width: 700px;" type="file"
+					name="upload" value=""/>
 				</td>
 			</tr>
 			<tr>
@@ -79,8 +86,8 @@
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					SummaryImage</td>
 				<td class="ta_01" bgColor="#ffffff">
-				<input style="height: 40px; width: 700px;" type="text"
-					name="SummaryImage" value=""/>
+				<input style="height: 40px; width: 700px;" type="file"
+					name="upload" value=""/>
 				</td>
 			</tr>
 			

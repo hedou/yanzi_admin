@@ -24,7 +24,7 @@
 		<property name="Valid" column="Valid"></property>
 		<property name="AddTime" column="AddTime"></property>
 		<property name="UpdateTime" column="UpdateTime"></property>
-		
+		<property name="StartTime" column="StartTime"></property>
 		<many-to-one name="term" class="com.ssh.term.domain.Term"  cascade="save-update">
 		<column name="t_Id"/>
 		</many-to-one>

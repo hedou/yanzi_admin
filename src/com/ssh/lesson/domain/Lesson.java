@@ -21,46 +21,29 @@ public class Lesson {
 	private String SummaryImage;
 	private String SummaryContent;
 	
-	public File getUpload() {
-		return upload;
-	}
-	public void setUpload(File upload) {
-		this.upload = upload;
-	}
-	public String getUploadFileName() {
-		return uploadFileName;
-	}
-	public void setUploadFileName(String uploadFileName) {
-		this.uploadFileName = uploadFileName;
-	}
-	public String getUploadContentType() {
-		return uploadContentType;
-	}
-	public void setUploadContentType(String uploadContentType) {
-		this.uploadContentType = uploadContentType;
-	}
+	
+	private File[] upload;
+	private String[] uploadFileName;
+	private String[] uploadContentType;
+    private String savePath;  
+	
+	
+	private Integer Valid;
+	private Timestamp AddTime;
+	private Timestamp UpdateTime;
+	private Timestamp StartTime;
 	public String getSavePath() {
 		return savePath;
 	}
 	public void setSavePath(String savePath) {
 		this.savePath = savePath;
 	}
-	private File upload;
-	private String uploadFileName;
-	private String uploadContentType;
-    private String savePath;  
-	
 	public String getSummaryContent() {
 		return SummaryContent;
 	}
 	public void setSummaryContent(String summaryContent) {
 		SummaryContent = summaryContent;
 	}
-	private Integer Valid;
-	private Timestamp AddTime;
-	private Timestamp UpdateTime;
-
-	
 	public Integer getLessonId() {
 		return LessonId;
 	}
@@ -138,6 +121,30 @@ public class Lesson {
 	}
 	public void setUpdateTime(Timestamp updateTime) {
 		UpdateTime = updateTime;
+	}
+	public Timestamp getStartTime() {
+		return StartTime;
+	}
+	public void setStartTime(Timestamp startTime) {
+		StartTime = startTime;
+	}
+	public File[] getUpload() {
+		return upload;
+	}
+	public void setUpload(File[] upload) {
+		this.upload = upload;
+	}
+	public String[] getUploadFileName() {
+		return uploadFileName;
+	}
+	public void setUploadFileName(String[] uploadFileName) {
+		this.uploadFileName = uploadFileName;
+	}
+	public String[] getUploadContentType() {
+		return uploadContentType;
+	}
+	public void setUploadContentType(String[] uploadContentType) {
+		this.uploadContentType = uploadContentType;
 	}
 
 

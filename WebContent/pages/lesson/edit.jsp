@@ -34,6 +34,13 @@
 					/></td>
 			</tr>
 			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					StartTime</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="datetime-local" name="StartTime"
+					value="<s:property value="model.StartTime"/>" /></td>
+			</tr>
+			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Image</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"

@@ -19,7 +19,7 @@
 		<property name="TDesc" column="t_Desc"></property>
 		<property name="StartTime" column="t_StartTime"></property>
 		<property name="EndTime" column="t_EndTime"></property>
-		
+		<property name="term" column="t_term"></property>
 		<property name="Valid" column="Valid"></property>
 		<property name="AddTime" column="AddTime"></property>
 		<property name="UpdateTime" column="UpdateTime"></property>
