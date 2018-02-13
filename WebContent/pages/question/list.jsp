@@ -38,6 +38,7 @@
 								<td align="center" width="5%">QuestionId</td>
 								<td align="center" width="5%">Index</td>							
 								<td align="center" width="5%">CorrectId</td>
+								<td align="center" width="5%">Type</td>
 								<td align="center" width="50%">JsonContent</td>
 								<td align="center" width="5%">Valid</td>
 								<td align="center" width="10%">AddTime</td>
@@ -59,6 +60,10 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="5%">
 										<s:property value="#u.CorrectId" />
+									</td>
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="5%">
+										<s:property value="#u.Type" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="50%"><s:property value="#u.JsonContent" /></td>

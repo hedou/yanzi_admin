@@ -71,6 +71,7 @@ public class QuestionAction extends ActionSupport implements ModelDriven<Questio
 		question = questionService.findQuestionById(question.getQuestionId());
 		HttpServletRequest request = ServletActionContext.getRequest();
 	    request.setAttribute("questionValid", question.getValid());
+	    request.setAttribute("questionType", question.getType());
 	    return "edit";
 	  }
 	

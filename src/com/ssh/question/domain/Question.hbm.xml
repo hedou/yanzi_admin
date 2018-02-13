@@ -16,7 +16,7 @@
 		<property name="Valid" column="Valid"></property>
 		<property name="AddTime" column="AddTime"></property>
 		<property name="UpdateTime" column="UpdateTime"></property>
-		
+		<property name="Type" column="Type"></property>
 		<many-to-one name="lesson" class="com.ssh.lesson.domain.Lesson" cascade="save-update"> 
 		<column name="LessonId"/>
 		</many-to-one>

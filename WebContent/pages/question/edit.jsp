@@ -47,11 +47,30 @@
 					value="<s:property value="model.CorrectId"/>" /></td>
 			</tr>
 			<tr>
+				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
+					Type</td>
+				<td bgColor="#ffffff" height="40%">
+				<%-- <input
+					 type="text" name="Type"
+					value="<s:property value="model.Type"/>" /> --%>
+					<select name="Type" >
+				      	<%String n=String.valueOf(request.getAttribute("questionType")); %>
+				    	<option value ="1" <%="1".equals(n)?"selected":"" %>>填空</option>
+  						<option value ="2" <%="2".equals(n)?"selected":"" %>>选择</option>
+  						<option value ="3" <%="3".equals(n)?"selected":"" %>>匹配</option>
+  						<option value ="4" <%="4".equals(n)?"selected":"" %>>对话</option>
+				    </select>
+				</td>
+			</tr>
+			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					JsonContent</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+				<td class="ta_01" bgColor="#ffffff">
+				    <%-- <input style="height: 40px; width: 700px;" type="text"
 					name="JsonContent" value="<s:property value="model.JsonContent"/>"
-					/></td>
+					/> --%>
+					<textarea rows="20" cols="80" name="JsonContent"><s:property value="model.JsonContent"/></textarea>
+				</td>
 			</tr>
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"

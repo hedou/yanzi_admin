@@ -13,9 +13,15 @@ public class Question {
 	private Integer Index;
 	private Integer CorrectId;	
 	private Timestamp AddTime;
-	
+	private Integer Type;
 
 	
+	public Integer getType() {
+		return Type;
+	}
+	public void setType(Integer type) {
+		Type = type;
+	}
 	public Timestamp getAddTime() {
 		return AddTime;
 	}

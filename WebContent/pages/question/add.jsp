@@ -28,14 +28,10 @@
 		 			<input id="upload_btn" type="button" value="上传" />
 	 			</td>
 			 </tr>
- 			<tr width="10%" class="ta_01" bgcolor="#f5fafe" align="center"><td>test</td>
- 			<td class="ta_01" width="10%" bgcolor="#f5fafe" align="center">http://qiniu.image.yetter.cn/curriculum/question/image/36f63375-4bf2-4a52-bf0d-eeea326f41c2.JPG</td>
- 			<td class="ta_01" width="10%" bgcolor="#f5fafe" align="center">已上传</td>
- 			</tr>
 		 </table>
 	</div>
 
-	<div  height="100%" style="float:right;width:550px" >
+	<div  height="100%" style="float:right;width:450px" >
 	<form id="userAction_save_do" name="Form1"
 		action="${pageContext.request.contextPath}/question_addQuestion.action"
 		method="post">
@@ -62,39 +58,30 @@
 				</td>
 			</tr>
 			
-			<%-- <tr>
+			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid：</td>
-				<td class="ta_01" bgColor="#ffffff"><input type="text" 
-					name="Valid" value="" />
+					Type：</td>
+				<td class="ta_01" bgColor="#ffffff">
+				<select name="Type">
+					<option value="1">填空</option>
+					<option value="2">选择</option>
+					<option value="3">匹配</option>
+					<option value="4">对话</option>
+				</select>
+				<!-- <input type="text" 
+					name="Type" value="" /> -->
 				</td>
 			</tr>
-				
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					AddTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="AddTime"
-					value="" /></td>
-
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					UpdateTime</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime" name="UpdateTime"
-					value="<s:property value=""/>" /></td>
-
-			</tr>
-			 --%>
 					
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					问题字符串（json格式）</td>
 				<td class="ta_01" bgColor="#ffffff">
-				<input style="height: 200px; width: 700px;" type="text"
-					name="JsonContent" value=""/>
+				<!-- <input style="height: 200px; width: 700px;" type="text"
+					name="JsonContent" value=""/> -->
+				<textarea rows="40" cols="80" name="JsonContent">
+					
+				</textarea>
 				</td>
 			</tr>
 				
