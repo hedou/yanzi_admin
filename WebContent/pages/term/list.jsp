@@ -53,6 +53,7 @@
 								<td width="4%" align="center">删除</td>
 							</tr>
 							<s:iterator var="u" value="termList" status="status">
+							<s:if test="#u.Valid == 0">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<%-- <td style="CURSOR: hand; HEIGHT: 22px" align="center"
@@ -118,6 +119,7 @@
 									</a>
 									</td>
 								</tr>
+								</s:if>
 							</s:iterator>
 						</table>
 					</td>

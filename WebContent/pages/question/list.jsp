@@ -48,6 +48,7 @@
 							</tr>
 							
 							<s:iterator var="u" value="questionList" status="status">
+							<s:if test="#u.Valid == 0">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
@@ -88,6 +89,7 @@
 											width="16" height="16" border="0" style="CURSOR: hand">
 									</a></td>
 								</tr>
+								</s:if>
 							</s:iterator>
 						</table>
 					</td>
