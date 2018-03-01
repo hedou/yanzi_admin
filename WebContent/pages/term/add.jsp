@@ -24,7 +24,7 @@
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title：</td>
+					Title 标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Title" value="" />
 				</td>
@@ -32,7 +32,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Brief：</td>
+					Brief 简介</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Brief" value="" />
 				</td>
@@ -40,7 +40,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					学期：</td>
+					Term 学期</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="term" value="" />
 				</td>
@@ -48,7 +48,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image：</td>
+					Image 图片</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="file" style="height: 40px; width: 700px;"
 					name="upload" value="" />
 				</td>
@@ -58,7 +58,7 @@
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Desc：</td>
+					Desc 描述</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="TDesc" value="" />
 				</td>
@@ -67,7 +67,7 @@
 			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index</td>
+					Index 序号</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Index"
 					value="" /></td>
@@ -76,7 +76,7 @@
 			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Price</td>
+					Price 价格</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Price"
 					value="" /></td>
@@ -84,14 +84,14 @@
 			</tr>		
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Discount</td>
+					Discount 打折</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Discount"
 					value="" /></td>
 			</tr>			
 				<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					StartTime</td>
+					StartTime 开始时间</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="datetime-local" name="StartTime"
 					value="" /></td>
@@ -99,7 +99,7 @@
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					EndTime</td>
+					EndTime 结束时间</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="datetime-local" name="EndTime"
 					value="<s:property value=""/>" /></td>

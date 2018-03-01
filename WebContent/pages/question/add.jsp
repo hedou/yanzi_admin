@@ -28,8 +28,17 @@
 		 			<input id="upload_btn" type="button" value="上传" />
 	 			</td>
 			 </tr>
+			 <tr>
+			 	<td>
+			 		
+			 		<a href="http://39.104.85.167:8083" target="_Blank">json录入辅助</a>
+			 	</td>
+			 </tr>
 		 </table>
+		 
 	</div>
+	
+	
 
 	<div  height="100%" style="float:right;width:450px" >
 	<form id="userAction_save_do" name="Form1"
@@ -45,14 +54,14 @@
 
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index：</td>
+					Index 序号</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" 
 					name="Index" value="" />
 				</td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					CorrectId：</td>
+					CorrectId：正误</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" 
 					name="CorrectId" value="" />
 				</td>
@@ -60,7 +69,7 @@
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Type：</td>
+					Type：类型</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<select name="Type">
 					<option value="1">填空</option>

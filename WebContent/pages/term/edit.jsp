@@ -25,7 +25,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title：</td>
+					Title 标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"style="height: 40px; width: 700px;"
 					name="Title" value="<s:property value="model.Title"/>" />
 				</td>
@@ -34,7 +34,7 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Brief</td>
+					Brief 简介</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Brief" value="<s:property value="model.Brief"/>"
 					/></td>
@@ -43,7 +43,7 @@
 			
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					学期</td>
+					Term 学期</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="term" value="<s:property value="model.term"/>"
 					/></td>
@@ -52,7 +52,7 @@
 			
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Price</td>
+					Price 价格</td>
 				<td class="ta_01" bgColor="#ffffff"><input  type="text"
 					name="Price" value="<s:property value="model.Price"/>"
 					/></td>
@@ -60,21 +60,21 @@
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Discount</td>
+					Discount 打折</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
 					name="Discount" value="<s:property value="model.Discount"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					TDesc</td>
+					TDesc 描述</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
 					name="TDesc" value="<s:property value="model.TDesc"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image</td>
+					Image 图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				   <%--  <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
@@ -84,14 +84,14 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					StartTime</td>
+					StartTime 开始时间</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
 					name="StartTime" value="<s:property value="model.StartTime"/>"
 					/></td>
 			</tr>
 				<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					EndTime</td>
+					EndTime 结束时间</td>
 				<td class="ta_01" bgColor="#ffffff">
 				    <input style="height: 40px; width: 700px;" type="text"
 					name="EndTime"  value="<s:property value="model.EndTime"/>"
@@ -100,14 +100,14 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index</td>
+					Index 序号</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="Index" value=""
+					name="Index" value="<s:property value="model.Index"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
+					Valid 上下线</td>
 				<td bgColor="#ffffff" height="40%">
 				    <select name="Valid" id="Valid">
 				      	<%String m=String.valueOf(request.getAttribute("termValid")); %>

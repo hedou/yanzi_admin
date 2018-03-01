@@ -31,7 +31,6 @@
 	    d.add('02',-1,'勋章列表','${pageContext.request.contextPath}/level_findLevelListByPage.action?currentPage=1','','mainFrame'); 
 		
 		
-		
 		document.write(d);
 	
 	</script>

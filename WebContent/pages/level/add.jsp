@@ -31,7 +31,7 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Level</td>
+					Level 勋章</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Level" value=""/>
 				</td>
@@ -40,7 +40,7 @@
 			
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image</td>
+					Image 图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<input style="height: 40px; width: 700px;" type="file"
 					name="upload" value=""/>
@@ -48,7 +48,7 @@
 			</tr>
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					MinExp</td>
+					MinExp 最少积分</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="MinExp" value=""/>
 				</td>
@@ -56,7 +56,7 @@
 			</tr>
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Coin</td>
+					Coin 勋币</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Coin" value=""/>
 				</td>

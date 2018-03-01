@@ -36,19 +36,19 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 <!-- 
 								<td align="center" width="2%">ID</td> -->
-								<td align="center" width="10%">Title</td>
-								<td align="center" width="2%">Term</td>
-								<td align="center" width="10%">Brief</td>
-								<td align="center" width="4%">Index</td>
-								<td align="center" width="5%">Price</td>
-								<td align="center" width="10%">Discount</td>
-								<td align="center" width="10%">Desc</td>
-								<td align="center" width="10%">Image</td>
-								<td align="center" width="4%">Valid</td>
-								<td align="center" width="6%">StartTime</td>
-								<td align="center" width="6%">EndTime</td>
-								<td align="center" width="6%">AddTime</td>
-								<td align="center" width="6%">UpdateTime</td>
+								<td align="center" width="10%">Title 标题</td>
+								<td align="center" width="2%">Term 期数</td>
+								<td align="center" width="10%">Brief 简介</td>
+								<td align="center" width="4%">Index 序号</td>
+								<td align="center" width="5%">Price 价格</td>
+								<td align="center" width="10%">Discount 打折</td>
+								<td align="center" width="10%">Desc 描述</td>
+								<td align="center" width="10%">Image 图片</td>
+								<td align="center" width="4%">Valid 上下线</td>
+								<td align="center" width="6%">StartTime 开始时间</td>
+								<td align="center" width="6%">EndTime 结束时间</td>
+								<td align="center" width="6%">AddTime 添加时间</td>
+								<td align="center" width="6%">UpdateTime 更新时间</td>
 								<td width="4%" align="center">编辑</td>
 								<td width="4%" align="center">删除</td>
 							</tr>

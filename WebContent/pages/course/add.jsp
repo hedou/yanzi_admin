@@ -22,7 +22,7 @@
 
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title：</td>
+					Title 标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Title" value="" />
 				</td>
@@ -31,7 +31,7 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					EnTitle</td>
+					EnTitle 副标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="EnTitle" value=""/>
 				</td>
@@ -40,7 +40,7 @@
 			
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image</td>
+					Image 图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<input style="height: 40px; width: 700px;" type="file"
 					name="upload" value=""/>

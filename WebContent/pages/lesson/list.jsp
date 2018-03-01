@@ -37,19 +37,19 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 <!-- 
 								<td align="center" width="1%">LessonId</td> -->
-								<td align="center" width="4%">Title</td>
-								<td align="center" width="7%">StartTime</td>
-								<td align="center" width="1%">Index</td>
-								<td align="center" width="6%">Image</td>
-								<td align="center" width="4%">PrimerTitle</td>
+								<td align="center" width="4%">Title 标题</td>
+								<td align="center" width="7%">StartTime 开始时间</td>
+								<td align="center" width="1%">Index 序号</td>
+								<td align="center" width="6%">Image 图片</td>
+								<td align="center" width="4%">PrimerTitle </td>
 								<td align="center" width="9%">PrimerBrief</td>
 								<td align="center" width="6%">PrimerImage</td>
 								<td align="center" width="9%">PrimerContent</td>
-								<td align="center" width="6%">SummaryImage</td>
-								<td align="center" width="9%">SummaryContent</td>
-								<td align="center" width="1%">Valid</td>
-								<td align="center" width="7%">AddTime</td>
-								<td align="center" width="7%">UpdateTime</td>
+								<td align="center" width="6%">SummaryImage 总结图片</td>
+								<td align="center" width="9%">SummaryContent 总结内容</td>
+								<td align="center" width="1%">Valid 上下线</td>
+								<td align="center" width="7%">AddTime 添加时间</td>
+								<td align="center" width="7%">UpdateTime 更新时间</td>
 								<td width="7%" align="center">编辑</td>
 								<td width="7%" align="center">删除</td>
 							</tr>

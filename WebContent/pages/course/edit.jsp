@@ -22,21 +22,21 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title：</td>
+					Title 标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="Title" value="<s:property value="model.Title"/>" />
 				</td>
 			</tr>
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					EnTitle</td>
+					EnTitle 副标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="EnTitle" value="<s:property value="model.EnTitle"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image</td>
+					Image 图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 			<%-- 	    <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
@@ -46,7 +46,7 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
+					Valid 上下线</td>
 				<td bgColor="#ffffff" height="40%">
 					 <select name="Valid" id="Valid">
 				      	<%String m=String.valueOf(request.getAttribute("courseValid")); %>

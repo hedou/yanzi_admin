@@ -32,14 +32,14 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Level</td>
+					Level 勋章</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="Level" value="<s:property value="model.Level"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image</td>
+					Image 图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				   <%--  <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
@@ -49,7 +49,7 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					MinExp</td>
+					MinExp 最少积分</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="MinExp"
 					value="<s:property value="model.MinExp"/>" /></td>
@@ -57,7 +57,7 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Coin</td>
+					Coin 勋币</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Coin"
 					value="<s:property value="model.Coin"/>" /></td>
@@ -65,7 +65,7 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
+					Valid 上下线</td>
 				<td bgColor="#ffffff" height="40%">
 					<select name="Valid" id="Valid">
 				      	<%String m=String.valueOf(request.getAttribute("levelValid")); %>
