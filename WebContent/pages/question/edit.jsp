@@ -21,7 +21,7 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
+					Valid 上下线</td>
 				<td bgColor="#ffffff" height="40%"><%-- <input
 					 type="text" name="Valid"
 					value="<s:property value="model.Valid"/>" /> --%>
@@ -34,21 +34,21 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index</td>
+					Index 序号</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Index"
 					value="<s:property value="model.Index"/>" /></td>
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					CorrectId</td>
+					CorrectId 正误</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="CorrectId"
 					value="<s:property value="model.CorrectId"/>" /></td>
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Type</td>
+					Type 类型</td>
 				<td bgColor="#ffffff" height="40%">
 				<%-- <input
 					 type="text" name="Type"
@@ -64,7 +64,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					JsonContent</td>
+					JsonContent json内容</td>
 				<td class="ta_01" bgColor="#ffffff">
 				    <%-- <input style="height: 40px; width: 700px;" type="text"
 					name="JsonContent" value="<s:property value="model.JsonContent"/>"

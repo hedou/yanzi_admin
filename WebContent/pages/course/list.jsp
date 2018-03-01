@@ -36,17 +36,19 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
 								<td align="center" width="4%">ID</td>
-								<td align="center" width="10%">Title</td>
-								<td align="center" width="10%">EnTitle</td>
-								<td align="center" width="25%">Image</td>
+								<td align="center" width="10%">Title 标题</td>
+								<td align="center" width="10%">EnTitle 副标题</td>
+								<td align="center" width="25%">Image 图片</td>
 
-								<td align="center" width="5%">Valid</td>
-								<td align="center" width="15%">AddTime</td>
-								<td align="center" width="15%">UpdateTime</td>
+								<td align="center" width="5%">Valid 上下线</td>
+								<td align="center" width="15%">AddTime 添加时间</td>
+								<td align="center" width="15%">UpdateTime 更新时间</td>
 								<td width="7%" align="center">编辑</td>
 								<td width="7%" align="center">删除</td>
 							</tr>
 							<s:iterator var="u" value="pageBean.list" status="status">
+							
+								<s:if test="#u.Valid == 0 ">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
@@ -65,9 +67,15 @@
 										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />">
 										
 										</td>
+										
+							
+										
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
 										<s:property value="#u.Valid" />
 									</td>
+									
+									
+									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="15%"><s:property value="#u.AddTime" /></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
@@ -86,6 +94,10 @@
 											width="16" height="16" border="0" style="CURSOR: hand">
 									</a></td>
 								</tr>
+								
+								</s:if>
+								
+								
 							</s:iterator>
 						</table>
 					</td>

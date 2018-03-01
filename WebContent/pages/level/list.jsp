@@ -35,15 +35,15 @@
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
-								<td align="center" width="7%">LevelId</td>
-								<td align="center" width="10%">Title</td>
-								<td align="center" width="10%">Level</td>
-								<td align="center" width="25%">Image</td>
-                                <td align="center" width="10%">MinExp</td>
-                                <td align="center" width="10%">Coin</td>
-								<td align="center" width="5%">Valid</td>
-								<td align="center" width="15%">AddTime</td>
-								<td align="center" width="15%">UpdateTime</td>
+								<td align="center" width="7%">LevelId 勋章号</td>
+								<td align="center" width="10%">Title 标题</td>
+								<td align="center" width="10%">Level 勋章</td>
+								<td align="center" width="25%">Image 图片</td>
+                                <td align="center" width="10%">MinExp 最小积分</td>
+                                <td align="center" width="10%">Coin 勋币</td>
+								<td align="center" width="5%">Valid 上下线</td>
+								<td align="center" width="15%">AddTime 添加时间</td>
+								<td align="center" width="15%">UpdateTime 更新时间</td>
 								<td width="7%" align="center">编辑</td>
 								<td width="7%" align="center">删除</td>
 							</tr>

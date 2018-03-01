@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title：</td>
+					Title 标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"  style="height: 40px; width: 700px;"
 					name="Title" value="<s:property value="model.Title"/>" />
 				</td>
@@ -28,21 +28,21 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index</td>
+					Index 序号</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
-					name="EnTitle" value="<s:property value="model.Index"/>"
+					name="Index" value="<s:property value="model.Index"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					StartTime</td>
+					StartTime 开始时间</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="datetime-local" name="StartTime"
 					value="<s:property value="model.StartTime"/>" /></td>
 			</tr>
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image</td>
+					Image 图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				   <%-- <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
@@ -53,7 +53,7 @@
 			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Valid</td>
+					Valid 上下线</td>
 				<td bgColor="#ffffff" height="40%">
 					<select name="Valid" id="Valid">
 				      	<%String m=String.valueOf(request.getAttribute("lessonValid")); %>
@@ -67,14 +67,14 @@
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					PrimerTitle</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="Image" value="<s:property value="model.PrimerTitle"/>"
+					name="PrimerTitle" value="<s:property value="model.PrimerTitle"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					PrimerBrief</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="Image" value="<s:property value="model.PrimerBrief"/>"
+					name="PrimerBrief" value="<s:property value="model.PrimerBrief"/>"
 					/></td>
 			</tr>
 			<tr>
@@ -89,20 +89,27 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerContent</td>
+					PrimerContent </td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="Image" value="<s:property value="model.PrimerContent"/>"
+					name="PrimerContent" value="<s:property value="model.PrimerContent"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					SummaryImage</td>
+					SummaryImage 总结图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				     <%--  <input style="height: 40px; width: 700px;" type="text"
-					name="Image" value="<s:property value="model.SummaryImage"/>"
+					name="SummaryImage" value="<s:property value="model.SummaryImage"/>"
 					/> --%>
 					<img alt="" style="height:50px; width:50px;" src="<s:property value="model.SummaryImage" />">
 				</td>
+			</tr>
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					SummaryContent </td>
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+					name="SummaryContent" value="<s:property value="model.SummaryContent"/>"
+					/></td>
 			</tr>
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"

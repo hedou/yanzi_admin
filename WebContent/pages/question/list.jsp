@@ -35,14 +35,14 @@
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
-								<td align="center" width="5%">QuestionId</td>
-								<td align="center" width="5%">Index</td>							
-								<td align="center" width="5%">CorrectId</td>
-								<td align="center" width="5%">Type</td>
-								<td align="center" width="50%">JsonContent</td>
-								<td align="center" width="5%">Valid</td>
-								<td align="center" width="10%">AddTime</td>
-								<td align="center" width="10%">UpdateTime</td>
+								<td align="center" width="5%">QuestionId 问题号</td>
+								<td align="center" width="5%">Index 序号</td>							
+								<td align="center" width="5%">CorrectId 正误</td>
+								<td align="center" width="5%">Type 类别</td>
+								<td align="center" width="50%">JsonContent json内容</td>
+								<td align="center" width="5%">Valid 上下线</td>
+								<td align="center" width="10%">AddTime 添加时间</td>
+								<td align="center" width="10%">UpdateTime 更新时间</td>
 								<td width="7%" align="center">编辑</td>
 								<td width="7%" align="center">删除</td>
 							</tr>
