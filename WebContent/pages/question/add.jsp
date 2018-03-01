@@ -59,13 +59,13 @@
 					name="Index" value="" />
 				</td>
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					CorrectId：正误</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" 
 					name="CorrectId" value="" />
 				</td>
-			</tr>
+			</tr> -->
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">

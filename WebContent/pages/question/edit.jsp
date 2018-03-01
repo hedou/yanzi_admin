@@ -39,13 +39,13 @@
 					 type="text" name="Index"
 					value="<s:property value="model.Index"/>" /></td>
 			</tr>
-			<tr>
+			<%-- <tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					CorrectId 正误</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="CorrectId"
 					value="<s:property value="model.CorrectId"/>" /></td>
-			</tr>
+			</tr> --%>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Type 类型</td>

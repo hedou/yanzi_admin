@@ -37,7 +37,7 @@
 
 								<td align="center" width="5%">QuestionId 问题号</td>
 								<td align="center" width="5%">Index 序号</td>							
-								<td align="center" width="5%">CorrectId 正误</td>
+								<!-- <td align="center" width="5%">CorrectId 正误</td> -->
 								<td align="center" width="5%">Type 类别</td>
 								<td align="center" width="50%">JsonContent json内容</td>
 								<td align="center" width="5%">Valid 上下线</td>
@@ -58,10 +58,10 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="5%">
 										<s:property value="#u.Index" /></td>
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<%-- <td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="5%">
 										<s:property value="#u.CorrectId" />
-									</td>
+									</td> --%>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="5%">
 										<s:property value="#u.Type" />
