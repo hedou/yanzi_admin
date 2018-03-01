@@ -16,8 +16,8 @@ public class UploadImage {
 	
 	
 
-	    private static final String ACCESS_KEY = "WTplbwbHC65heurdCiCSy4N_WHvfvgw7rNeKgCOW";
-	    private static final String SECRET_KEY = "Z86FgQpTVFUO_5gXK5RkleGXwned1OWyfzZY_fQd";
+		private static final String ACCESS_KEY = "bMsxBlEhchY7vyVNBn8aZRMbQWNIITXd2oewsiQA";
+	    private static final String SECRET_KEY = "B2hDo4x-wTlXcKfOUI9wnA3wrn9iGkqHtTV3eoQY";
 	    private static final String URL_PREFIX = "http://qiniu.image.yetter.cn/";
 	    private static final int TOKEN_EXPRIES = 5 * 60;
 	    private static final String BUCKET = "yetter";
@@ -27,29 +27,29 @@ public class UploadImage {
 //		   new UploadImage().upload("default/","D://image//1.jpg",".jpg");
 //	   }
 	    public String getUpToken() {
-	        //ÃÜÔ¿ÅäÖÃ
+	        //ï¿½ï¿½Ô¿ï¿½ï¿½ï¿½ï¿½
 	        Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
 	        return auth.uploadToken(BUCKET);
 	    }
 	    public String upload(String path,String FilePath,String prefix) throws IOException {
-	            //µÚ¶þÖÖ·½Ê½: ×Ô¶¯Ê¶±ðÒªÉÏ´«µÄ¿Õ¼ä(bucket)µÄ´æ´¢ÇøÓòÊÇ»ª¶«¡¢»ª±±¡¢»ªÄÏ¡£
+	            //ï¿½Ú¶ï¿½ï¿½Ö·ï¿½Ê½: ï¿½Ô¶ï¿½Ê¶ï¿½ï¿½Òªï¿½Ï´ï¿½ï¿½Ä¿Õ¼ï¿½(bucket)ï¿½Ä´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½Ç»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¡ï¿½
 	            Zone z = Zone.autoZone();
 	            Configuration c = new Configuration(z);
-	            //´´½¨ÉÏ´«¶ÔÏó
+	            //ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½
 	            UploadManager uploadManager = new UploadManager(c);
 
-	            //ÉÏ´«µ½ÆßÅ£ºó±£´æµÄÎÄ¼þÃû
+	            //ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ó±£´ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 	            String key = path + UUID.randomUUID() + prefix;
-	            //ÉÏ´«ÎÄ¼þµÄÂ·¾¶
+	            //ï¿½Ï´ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½
 	            Response res = null;
 	            try {
-	                //µ÷ÓÃput·½·¨ÉÏ´«
+	                //ï¿½ï¿½ï¿½ï¿½putï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½
 	                res = uploadManager.put(FilePath, key, getUpToken());
-	                //´òÓ¡·µ»ØµÄÐÅÏ¢
+	                //ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½Ï¢
 	                System.out.println(res.bodyString());
 	            } catch (QiniuException e) {
 	                Response r = e.response;
-	                //ÏìÓ¦µÄÎÄ±¾ÐÅÏ¢
+	                //ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ï¢
 	                System.out.println(r.bodyString());
 	            }
 	            String jsonString = res.bodyString();

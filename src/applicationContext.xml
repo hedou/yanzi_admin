@@ -15,7 +15,7 @@
 	<!-- 配置连接池datasource -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/test?userUnicode=true&amp;characterEncoding=utf-8" />
+		<property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/test?userUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true" />
 		<property name="user" value="root" />
 		<property name="password" value="yanzi@123456" />
 	</bean>
