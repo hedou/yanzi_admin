@@ -85,16 +85,16 @@
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					StartTime 开始时间</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="StartTime" value="<s:property value="model.StartTime"/>"
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="date"
+					name="StartTime" value="<s:property value="%{getText('{0,date,yyyy-MM-dd}',{model.StartTime})}"/>"
 					/></td>
 			</tr>
 				<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					EndTime 结束时间</td>
 				<td class="ta_01" bgColor="#ffffff">
-				    <input style="height: 40px; width: 700px;" type="text"
-					name="EndTime"  value="<s:property value="model.EndTime"/>"
+				    <input style="height: 40px; width: 700px;" type="date"
+					name="EndTime"  value="<s:property value="%{getText('{0,date,yyyy-MM-dd}',{model.EndTime})}"/>"
 					/>
 				</td>
 			</tr>

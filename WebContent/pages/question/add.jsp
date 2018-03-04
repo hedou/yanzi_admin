@@ -52,13 +52,13 @@
 					height="26"><strong><STRONG>添加题目</STRONG> </strong></td>
 			</tr>
 
-			<tr>
+			<!-- <tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					Index 序号</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" 
 					name="Index" value="" />
 				</td>
-			</tr>
+			</tr> -->
 			<!-- <tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					CorrectId：正误</td>

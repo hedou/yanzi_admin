@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.ssh.question.dao.QuestionDao;
 import com.ssh.question.domain.Question;
 import com.ssh.question.service.QuestionService;
@@ -22,6 +23,9 @@ public class QuestionServiceImpl implements QuestionService{
 	}
 	@Override
 	public void addQuestion(Question question) {
+		int lessonId = (int)ActionContext.getContext().getSession().get("LessonId");	
+	    int index2 = questionDao.findQuestionMaxIndex(lessonId);
+		question.setIndex(index2+1);
 		questionDao.addQuestion(question);
 		
 	}
@@ -37,8 +41,8 @@ public class QuestionServiceImpl implements QuestionService{
 	}
 	@Override
 	public void delete(Question existquestion) {
-		existquestion.setValid(1);
-		questionDao.update(existquestion);
+//		existquestion.setValid(1);
+		questionDao.delete(existquestion);
 		
 	}
 	

@@ -32,7 +32,7 @@
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					StartTime 开启时间：</td>
 				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime-local" name="StartTime"
+					 type="date" name="StartTime"
 					value="" /></td>
 			</tr>	
 			<tr>

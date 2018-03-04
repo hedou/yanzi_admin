@@ -1,6 +1,8 @@
 package com.ssh.lesson.domain;
 
 import java.io.File;
+
+import java.sql.Date;
 import java.sql.Timestamp;
 
 import com.ssh.term.domain.Term;

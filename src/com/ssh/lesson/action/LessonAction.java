@@ -65,7 +65,7 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 		int t_Id = (int)ActionContext.getContext().getSession().get("t_Id");
 		Term term = termService.findTermById(t_Id);
 		
-		File[] srcFile = lesson.getUpload();//包含关卡简图，关卡封面图，关卡总结背景图
+		File[] srcFile = lesson.getUpload();//鍖呭惈鍏冲崱绠�鍥撅紝鍏冲崱灏侀潰鍥撅紝鍏冲崱鎬荤粨鑳屾櫙鍥�
 		String[] fileName = lesson.getUploadFileName();
 		String path = ServletActionContext.getServletContext().getRealPath(lesson.getSavePath());
 		File file = new File(path);
@@ -111,7 +111,11 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 	 public String edit()
 	  {
 		 
+		
+		
 		lesson = lessonService.findLessonById(lesson.getLessonId());
+		
+		
 		HttpServletRequest request = ServletActionContext.getRequest();
 	    request.setAttribute("lessonValid", lesson.getValid());
 	    return "edit";
@@ -120,6 +124,11 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 	 
 	 public String update()
 	  {
+		 
+		 System.out.println(lesson.getStartTime()+"==============================================================");
+		
+		 
+		lesson.setStartTime(lesson.getStartTime());
 	    lessonService.update(lesson);
 	    
 	    List<Lesson> lessonList = lessonService.findLessonListByTermId(t_Id);    

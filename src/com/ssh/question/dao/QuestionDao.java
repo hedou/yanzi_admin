@@ -15,5 +15,6 @@ public interface QuestionDao {
 	void update(Question question);
 
 	void delete(Question existquestion);
-
+    
+	int findQuestionMaxIndex(int lessonId);
 }

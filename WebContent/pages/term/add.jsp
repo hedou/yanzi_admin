@@ -93,7 +93,7 @@
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					StartTime 开始时间</td>
 				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime-local" name="StartTime"
+					 type="date" name="StartTime"
 					value="" /></td>
 			</tr>
 			
@@ -101,7 +101,7 @@
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					EndTime 结束时间</td>
 				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime-local" name="EndTime"
+					 type="date" name="EndTime"
 					value="<s:property value=""/>" /></td>
 			</tr>
 			<tr>

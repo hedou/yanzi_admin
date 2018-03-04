@@ -36,9 +36,13 @@
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					StartTime 开始时间</td>
-				<td bgColor="#ffffff" height="40%"><input
-					 type="datetime-local" name="StartTime"
-					value="<s:property value="model.StartTime"/>" /></td>
+				<td bgColor="#ffffff" height="40%">
+				<input
+					 type="date" name="StartTime"
+					value="<s:property value="%{getText('{0,date,yyyy-MM-dd}',{model.StartTime})}"/>" /></td>
+					
+					<%-- <input type="datetime" name="StartTime" value="<s:property value="model.StartTime"/>" /></td> --%>
+					
 			</tr>
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
