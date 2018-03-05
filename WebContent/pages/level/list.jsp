@@ -71,9 +71,9 @@
 										<s:property value="#u.Valid" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="15%"><s:property value="#u.AddTime" /></td>
+										width="15%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.AddTime})}" /></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="15%"><s:property value="#u.UpdateTime" /></td>
+										width="15%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.UpdateTime})}" /></td>
 									<td align="center" style="HEIGHT: 22px"><a
 										href="${ pageContext.request.contextPath }/level_edit.action?LevelId=<s:property value="#u.LevelId"/>">
 											<img

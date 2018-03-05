@@ -98,9 +98,9 @@
 									</td>
 									
 								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.AddTime" /></td>
+										width="10%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.AddTime})}" /></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.UpdateTime" /></td>
+										width="10%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.UpdateTime})}" /></td>
 									<td align="center" style="HEIGHT: 22px"><a
 										href="${ pageContext.request.contextPath }/lesson_edit.action?LessonId=<s:property value="#u.LessonId"/>">
 											<img

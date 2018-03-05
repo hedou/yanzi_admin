@@ -98,16 +98,17 @@
 										<s:property value="#u.Valid" />
 									</td>
 									
+									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="6%"><s:property value="#u.StartTime" />
+										width="6%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.StartTime})}" />
 									</td>
 									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="6%"><s:property value="#u.EndTime" /></td>
+										width="6%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.EndTime})}" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="6%"><s:property value="#u.AddTime" /></td>
+										width="6%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.AddTime})}" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="6%"><s:property value="#u.UpdateTime" /></td>
+										width="6%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.UpdateTime})}" /></td>
 									<td align="center" style="HEIGHT: 22px">
 									  <a href="${ pageContext.request.contextPath }/term_edit.action?t_Id=<s:property value="#u.t_Id"/>">
 									     <img src="${pageContext.request.contextPath}/pages/images/i_edit.gif" border="0" style="CURSOR: hand"></a>
