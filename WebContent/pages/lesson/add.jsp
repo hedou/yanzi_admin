@@ -22,7 +22,7 @@
 
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title 标题</td>
+					关卡标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Title" value="" />
 				</td>
@@ -37,14 +37,14 @@
 			</tr>	
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image 图片</td>
+					关卡封面图</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<input style="height: 40px; width: 700px;" type="file"
 					name="upload" value=""/>
 				</td>
 			</tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index 序号</td>
+					关卡号</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<input style="height: 40px; width: 700px;" type="text"
 					name="Index" value=""/>
@@ -52,7 +52,7 @@
 			</tr>
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerTitle</td>
+					关卡标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="PrimerTitle" value=""/>
 				</td>
@@ -60,7 +60,7 @@
 			</tr>
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerBrief</td>
+					关卡介绍</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="PrimerBrief" value=""/>
 				</td>
@@ -68,7 +68,7 @@
 			</tr>
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerImage</td>
+					关卡内背景图</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<input style="height: 40px; width: 700px;" type="file"
 					name="upload" value=""/>
@@ -76,7 +76,7 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerContent</td>
+					目录</td>
 				<td bgColor="#ffffff" height="40%"><input style="height: 40px; width: 700px;"
 					 type="text" name="PrimerContent"
 					value="" /></td>
@@ -84,7 +84,7 @@
 			</tr>
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					SummaryImage 总结图片</td>
+					知识点回顾图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<input style="height: 40px; width: 700px;" type="file"
 					name="upload" value=""/>
@@ -93,7 +93,7 @@
 			
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					SummaryContent 总结内容</td>
+					知识点回顾文字</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<input style="height: 40px; width: 700px;" type="text"
 					name="SummaryContent" value=""/>

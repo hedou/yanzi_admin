@@ -55,7 +55,8 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
 										
-										<a href="${ pageContext.request.contextPath }/level_findLevelListByCourseId.action?CourseId=<s:property value="#u.CourseId"/>">
+										<a style="display:inline-block;
+                width:100%; height:100%; " href="${ pageContext.request.contextPath }/level_findLevelListByCourseId.action?CourseId=<s:property value="#u.CourseId"/>">
 										<s:property value="#u.Title" />
 										</a>
 										</td>

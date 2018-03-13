@@ -62,7 +62,9 @@ public class QuestionDaoImpl extends HibernateDaoSupport  implements QuestionDao
 		
 		String sql = "select max(t_Index) from Question where LessonId = ?";
 		Integer index = (Integer)session.createSQLQuery(sql).setParameter(0, LessonId).uniqueResult();
-		 
+		if(index == null) {
+			return 0;
+		}
 		return index.intValue();
 	}
 

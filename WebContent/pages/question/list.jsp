@@ -36,9 +36,9 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
 								<td align="center" width="5%">QuestionId 问题号</td>
-								<td align="center" width="5%">Index 序号</td>							
+								<td align="center" width="5%">题号</td>							
 								<!-- <td align="center" width="5%">CorrectId 正误</td> -->
-								<td align="center" width="5%">Type 类别</td>
+								<td align="center" width="5%">题型</td>
 								<td align="center" width="50%">JsonContent json内容</td>
 								<td align="center" width="5%">Valid 上下线</td>
 								<td align="center" width="10%">AddTime 添加时间</td>

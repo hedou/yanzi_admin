@@ -25,7 +25,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title 标题</td>
+					课程标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"style="height: 40px; width: 700px;"
 					name="Title" value="<s:property value="model.Title"/>" />
 				</td>
@@ -34,7 +34,7 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Brief 简介</td>
+					课程简介</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Brief" value="<s:property value="model.Brief"/>"
 					/></td>
@@ -52,7 +52,7 @@
 			
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Price 价格</td>
+					原价</td>
 				<td class="ta_01" bgColor="#ffffff"><input  type="text"
 					name="Price" value="<s:property value="model.Price"/>"
 					/></td>
@@ -60,14 +60,14 @@
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Discount 打折</td>
+					折扣价</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
 					name="Discount" value="<s:property value="model.Discount"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					TDesc 描述</td>
+					引导语</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
 					name="TDesc" value="<s:property value="model.TDesc"/>"
 					/></td>

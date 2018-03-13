@@ -36,13 +36,13 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 <!-- 
 								<td align="center" width="2%">ID</td> -->
-								<td align="center" width="10%">Title 标题</td>
+								<td align="center" width="10%">课程标题</td>
 								<td align="center" width="2%">Term 期数</td>
-								<td align="center" width="10%">Brief 简介</td>
+								<td align="center" width="10%">课程简介</td>
 								<td align="center" width="4%">Index 序号</td>
-								<td align="center" width="5%">Price 价格</td>
-								<td align="center" width="10%">Discount 打折</td>
-								<td align="center" width="10%">Desc 描述</td>
+								<td align="center" width="5%">原价</td>
+								<td align="center" width="10%">折扣价</td>
+								<td align="center" width="10%">引导语</td>
 								<td align="center" width="10%">Image 图片</td>
 								<td align="center" width="4%">Valid 上下线</td>
 								<td align="center" width="6%">StartTime 开始时间</td>
@@ -63,7 +63,8 @@
 								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
 										
-										<a href="${ pageContext.request.contextPath }/lesson_findLessonListByTermId.action?t_Id=<s:property value="#u.t_Id"/>">
+										<a style="display:inline-block;
+                width:100%; height:100%; " href="${ pageContext.request.contextPath }/lesson_findLessonListByTermId.action?t_Id=<s:property value="#u.t_Id"/>">
 										<s:property value="#u.Title" />
 										</a>
 										</td>

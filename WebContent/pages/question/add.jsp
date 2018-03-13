@@ -69,7 +69,7 @@
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Type：类型</td>
+					题型</td>
 				<td class="ta_01" bgColor="#ffffff">
 				<select name="Type">
 					<option value="1">填空</option>

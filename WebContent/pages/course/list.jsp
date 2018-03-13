@@ -36,8 +36,8 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
 								<td align="center" width="4%">ID</td>
-								<td align="center" width="10%">Title 标题</td>
-								<td align="center" width="10%">EnTitle 副标题</td>
+								<td align="center" width="10%">课程标题</td>
+								<td align="center" width="10%">英文标题</td>
 								<td align="center" width="25%">Image 图片</td>
 
 								<td align="center" width="5%">Valid 上下线</td>
@@ -56,7 +56,8 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
 										
-										<a href="${ pageContext.request.contextPath }/term_findTermListByCourseId.action?CourseId=<s:property value="#u.CourseId"/>">
+										<a  style="display:inline-block;
+                width:100%; height:100%; " href="${ pageContext.request.contextPath }/term_findTermListByCourseId.action?CourseId=<s:property value="#u.CourseId"/>">
 										<s:property value="#u.Title" />
 										</a>
 										</td>

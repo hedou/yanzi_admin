@@ -22,14 +22,14 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title 标题</td>
+					课程标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="Title" value="<s:property value="model.Title"/>" />
 				</td>
 			</tr>
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					EnTitle 副标题</td>
+					英文标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="EnTitle" value="<s:property value="model.EnTitle"/>"
 					/></td>

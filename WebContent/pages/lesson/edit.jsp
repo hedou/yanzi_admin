@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Title 标题</td>
+					关卡标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"  style="height: 40px; width: 700px;"
 					name="Title" value="<s:property value="model.Title"/>" />
 				</td>
@@ -28,7 +28,7 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index 序号</td>
+					关卡号</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
 					name="Index" value="<s:property value="model.Index"/>"
 					/></td>
@@ -46,7 +46,7 @@
 			</tr>
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image 图片</td>
+					关卡封面图</td>
 				<td class="ta_01" bgColor="#ffffff">
 				   <%-- <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.Image"/>"
@@ -69,21 +69,21 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerTitle</td>
+					关卡标题</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
 					name="PrimerTitle" value="<s:property value="model.PrimerTitle"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerBrief</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+					关卡介绍</td>
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 60px; width: 700px;" type="text"
 					name="PrimerBrief" value="<s:property value="model.PrimerBrief"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerImage</td>
+					关卡内背景图</td>
 				<td class="ta_01" bgColor="#ffffff">
 				    <%-- <input style="height: 40px; width: 700px;" type="text"
 					name="Image" value="<s:property value="model.PrimerImage"/>"
@@ -93,14 +93,14 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					PrimerContent </td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+					目录 </td>
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 60px; width: 700px;" type="text"
 					name="PrimerContent" value="<s:property value="model.PrimerContent"/>"
 					/></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					SummaryImage 总结图片</td>
+					知识点回顾图片</td>
 				<td class="ta_01" bgColor="#ffffff">
 				     <%--  <input style="height: 40px; width: 700px;" type="text"
 					name="SummaryImage" value="<s:property value="model.SummaryImage"/>"
@@ -110,8 +110,8 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					SummaryContent </td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
+					知识点回顾文字 </td>
+				<td class="ta_01" bgColor="#ffffff"><input style="height: 60px; width: 700px;" type="text"
 					name="SummaryContent" value="<s:property value="model.SummaryContent"/>"
 					/></td>
 			</tr>

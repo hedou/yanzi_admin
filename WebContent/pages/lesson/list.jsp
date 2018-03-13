@@ -35,18 +35,18 @@
 							style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
-<!-- 
-								<td align="center" width="1%">LessonId</td> -->
-								<td align="center" width="4%">Title 标题</td>
+
+								<td align="center" width="1%">LessonId 关卡号</td>
+								<td align="center" width="4%">关卡标题</td>
 								<td align="center" width="7%">StartTime 开始时间</td>
-								<td align="center" width="1%">Index 序号</td>
-								<td align="center" width="6%">Image 图片</td>
-								<td align="center" width="4%">PrimerTitle </td>
-								<td align="center" width="9%">PrimerBrief</td>
-								<td align="center" width="6%">PrimerImage</td>
-								<td align="center" width="9%">PrimerContent</td>
-								<td align="center" width="6%">SummaryImage 总结图片</td>
-								<td align="center" width="9%">SummaryContent 总结内容</td>
+								<td align="center" width="1%">关卡号</td>
+								<td align="center" width="6%">关卡封面图</td>
+								<td align="center" width="4%">关卡标题 </td>
+								<td align="center" width="9%">关卡介绍</td>
+								<td align="center" width="6%">关卡内背景图</td>
+								<td align="center" width="9%">目录</td>
+								<td align="center" width="6%">知识点回顾图片</td>
+								<td align="center" width="9%">知识点回顾文字</td>
 								<td align="center" width="1%">Valid 上下线</td>
 								<td align="center" width="7%">AddTime 添加时间</td>
 								<td align="center" width="7%">UpdateTime 更新时间</td>
@@ -58,19 +58,20 @@
 							<s:if test="#u.Valid == 0">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
-									<%-- <td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									 <td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%">
 										<s:property value="#u.LessonId" />
-										</td> --%>
+										</td> 
 									 	<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%">
 										
-										<a href="${ pageContext.request.contextPath }/question_findQuestionListByLessonId.action?LessonId=<s:property value="#u.LessonId"/>">
+										<a style="display:inline-block;
+                width:100%; height:100%; " href="${ pageContext.request.contextPath }/question_findQuestionListByLessonId.action?LessonId=<s:property value="#u.LessonId"/>">
 										<s:property value="#u.Title" />
 										</a>
 										</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="7%"><s:property value="#u.StartTime" /></td>	
+										width="7%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.StartTime})}" /></td>	
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%"><s:property value="#u.Index" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px;"  align="center"

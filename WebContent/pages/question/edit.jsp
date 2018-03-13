@@ -34,7 +34,7 @@
 			</tr>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index 序号</td>
+					题号</td>
 				<td bgColor="#ffffff" height="40%"><input
 					 type="text" name="Index"
 					value="<s:property value="model.Index"/>" /></td>
@@ -48,7 +48,7 @@
 			</tr> --%>
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
-					Type 类型</td>
+					题型</td>
 				<td bgColor="#ffffff" height="40%">
 				<%-- <input
 					 type="text" name="Type"
