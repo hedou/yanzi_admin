@@ -9,6 +9,17 @@ import com.ssh.term.domain.Term;
 
 public class Lesson {
 	
+//	Ôö¼Ódelete×Ö¶Î
+	private Integer Deletes;
+	
+	
+	
+	public Integer getDeletes() {
+		return Deletes;
+	}
+	public void setDeletes(Integer deletes) {
+		Deletes = deletes;
+	}
 	private Integer LessonId;
 	
 	private Term term;

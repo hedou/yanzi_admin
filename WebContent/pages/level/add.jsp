@@ -31,7 +31,7 @@
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Level 勋章</td>
+					Level 勋章(这里填的是数字)</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Level" value=""/>
 				</td>
@@ -77,5 +77,6 @@
 			</tr>
 		</table>
 	</form>
+	
 </body>
 </HTML>

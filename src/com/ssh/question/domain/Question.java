@@ -15,7 +15,15 @@ public class Question {
 	private Timestamp AddTime;
 	private Integer Type;
 
+	private Integer Deletes;
 	
+	
+	public Integer getDeletes() {
+		return Deletes;
+	}
+	public void setDeletes(Integer deletes) {
+		Deletes = deletes;
+	}
 	public Integer getType() {
 		return Type;
 	}

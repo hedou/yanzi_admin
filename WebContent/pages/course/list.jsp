@@ -48,7 +48,7 @@
 							</tr>
 							<s:iterator var="u" value="pageBean.list" status="status">
 							
-								<s:if test="#u.Valid == 0 ">
+								<s:if test="#u.Deletes == 0 ">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"

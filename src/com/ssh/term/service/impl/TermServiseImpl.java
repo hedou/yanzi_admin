@@ -41,6 +41,7 @@ public class TermServiseImpl implements TermService {
 
 	@Override
 	public void delete(Term existTerm) {
+		existTerm.setDeletes(1);
 		existTerm.setValid(1);
 		termDao.update(existTerm);
 		

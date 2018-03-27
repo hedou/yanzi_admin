@@ -40,7 +40,7 @@
 	
 	
 
-	<div  height="100%" style="float:right;width:450px" >
+	<div  height="100%" style="float:right;width:300px" >
 	<form id="userAction_save_do" name="Form1"
 		action="${pageContext.request.contextPath}/question_addQuestion.action"
 		method="post">
@@ -88,9 +88,7 @@
 				<td class="ta_01" bgColor="#ffffff">
 				<!-- <input style="height: 200px; width: 700px;" type="text"
 					name="JsonContent" value=""/> -->
-				<textarea rows="40" cols="80" name="JsonContent">
-					
-				</textarea>
+				<textarea rows="40" cols="80" name="JsonContent"></textarea>
 				</td>
 			</tr>
 				

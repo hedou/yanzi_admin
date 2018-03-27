@@ -6,6 +6,17 @@ import java.sql.Timestamp;
 
 public class Course {
 	
+	
+//	Ôö¼Ódelete ×Ö¶Î fk
+	private Integer deletes;
+	
+
+	public Integer getDeletes() {
+		return deletes;
+	}
+	public void setDeletes(Integer deletes) {
+		this.deletes = deletes;
+	}
 	private Integer CourseId;
 	private String Title;
 	private String EnTitle;

@@ -7,6 +7,15 @@ import com.ssh.course.domain.Course;
 
 public class Level {
 	
+	private Integer Deletes;
+	
+	
+	public Integer getDeletes() {
+		return Deletes;
+	}
+	public void setDeletes(Integer deletes) {
+		Deletes = deletes;
+	}
 	private Integer LevelId;
 	
 	private Course course;

@@ -6,7 +6,19 @@ import java.sql.Timestamp;
 import com.ssh.course.domain.Course;
 
 public class Term {
+	private Integer Deletes;
 	
+	
+	
+
+	public Integer getDeletes() {
+		return Deletes;
+	}
+
+	public void setDeletes(Integer deletes) {
+		Deletes = deletes;
+	}
+
 	private Integer t_Id;
 	private String Title;
 	private String Brief;
@@ -20,7 +32,7 @@ public class Term {
 	private Integer Valid;
 	private Timestamp AddTime;
 	private Timestamp UpdateTime;
-	private Integer term;//课程第几期
+	private Integer term;//璇剧▼绗嚑鏈�
 	private Course course;
 
 	private File upload;

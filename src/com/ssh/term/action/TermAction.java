@@ -61,7 +61,7 @@ public class TermAction extends ActionSupport implements ModelDriven<Term> {
 	
 	public String addTerm() throws IOException{
 		int courseid = (int)ActionContext.getContext().getSession().get("CourseId");
-		Course course = courseService.findCourseById(courseid);
+		Course course = courseService.findCourseById(courseid);//1520391469000
 		
 		File srcFile = term.getUpload();
 		String path = ServletActionContext.getServletContext().getRealPath(term.getSavePath());

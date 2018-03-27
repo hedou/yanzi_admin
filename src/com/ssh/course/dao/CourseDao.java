@@ -14,5 +14,5 @@ public interface CourseDao {
 	void delete(Course existCourse);
 	void update(Course course);
 	void add(Course course);
-
+	
 }

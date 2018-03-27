@@ -14,7 +14,7 @@ public class CourseDaoImpl extends HibernateDaoSupport implements CourseDao {
 
 	@Override
 	public List<Course> findCourseListByPage(int begin, int pageSize) {
-		 String hql = "from Course";
+		 String hql = "from Course where Deletes=0";
 		    List<Course> list = (List)getHibernateTemplate().execute(
 		      new PageHibernateCallback(hql, null, begin, 
 		      pageSize));
@@ -23,7 +23,7 @@ public class CourseDaoImpl extends HibernateDaoSupport implements CourseDao {
 
 	@Override
 	public int findCourseCount() {
-		String hql = "select count(*) from Course";
+		String hql = "select count(*) from Course where Deletes=0";
 		List<Long> count = (List<Long>) this.getHibernateTemplate().find(hql);
 		if (count!=null&& count.size()>0) {
 			return count.get(0).intValue();

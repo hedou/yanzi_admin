@@ -43,6 +43,7 @@ public class LessonServiceImpl implements LessonService {
 
 	@Override
 	public void delete(Lesson existlesson) {
+		existlesson.setDeletes(1);
 		existlesson.setValid(1);
 		lessonDao.update(existlesson);
 		

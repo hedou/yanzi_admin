@@ -26,7 +26,7 @@ public class CourseServiseImpl implements CourseService {
 		PageBean<Course> pageBean = new PageBean<Course>();
 		
 		//ÿҳ��ʾ��¼��
-		int pageSize = 4;
+		int pageSize = 20;
 		pageBean.setPageSize(pageSize);
 		//�ܹ���¼��
 		int totalCount = 0 ;
@@ -59,7 +59,8 @@ public class CourseServiseImpl implements CourseService {
 
 	@Override
 	public void delete(Course existCourse) {
-		existCourse.setValid(1);
+		existCourse.setDeletes(1);
+	    existCourse.setValid(1);
 		courseDao.update(existCourse);
 		
 	}

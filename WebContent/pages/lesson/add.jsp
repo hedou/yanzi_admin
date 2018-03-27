@@ -61,8 +61,10 @@
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
 					关卡介绍</td>
-				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="PrimerBrief" value=""/>
+				<td class="ta_01" bgColor="#ffffff">
+				<!-- <input type="text" style="height: 40px; width: 700px;"
+					name="PrimerBrief" value=""/> -->
+					<textarea rows="10" cols="100" name="PrimerBrief"></textarea>
 				</td>
 				
 			</tr>
@@ -77,9 +79,12 @@
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					目录</td>
-				<td bgColor="#ffffff" height="40%"><input style="height: 40px; width: 700px;"
+				<td bgColor="#ffffff" height="40%">
+				<!-- <input style="height: 40px; width: 700px;"
 					 type="text" name="PrimerContent"
-					value="" /></td>
+					value="" /> -->
+					<textarea rows="10" cols="100" name="PrimerContent"></textarea>
+				</td>
 
 			</tr>
 			<tr>
@@ -95,8 +100,9 @@
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					知识点回顾文字</td>
 				<td class="ta_01" bgColor="#ffffff">
-				<input style="height: 40px; width: 700px;" type="text"
-					name="SummaryContent" value=""/>
+				<!-- <input style="height: 40px; width: 700px;" type="text"
+					name="SummaryContent" value=""/> -->
+					<textarea rows="10" cols="100" name="SummaryContent"></textarea>
 				</td>
 			</tr>
 			<tr>

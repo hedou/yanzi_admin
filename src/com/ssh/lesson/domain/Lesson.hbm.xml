@@ -22,6 +22,7 @@
 		<property name="SummaryContent" column="SummaryContent"></property>
 		
 		<property name="Valid" column="Valid"></property>
+		<property name="Deletes" column="Deletes"></property>
 		<property name="AddTime" column="AddTime"></property>
 		<property name="UpdateTime" column="UpdateTime"></property>
 		<property name="StartTime" column="StartTime"></property>

@@ -55,7 +55,7 @@
 							</tr>
 							
 							<s:iterator var="u" value="lessonList" status="status">
-							<s:if test="#u.Valid == 0">
+							<s:if test="#u.Deletes == 0">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									 <td style="CURSOR: hand; HEIGHT: 22px" align="center"
@@ -84,15 +84,21 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.PrimerBrief" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.PrimerImage" /></td>
+										width="10%">
+										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.PrimerImage" />">
+										</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="10%"><s:property value="#u.PrimerContent" /></td>	
 										
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.SummaryImage" /></td>
+										width="10%">
+										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.SummaryImage" />">
+										</td>
 							
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.SummaryContent" /></td>
+										width="10%"><s:property value="#u.SummaryContent" />
+										
+										</td>
 																					
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
 										<s:property value="#u.Valid" />
