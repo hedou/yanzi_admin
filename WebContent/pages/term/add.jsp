@@ -32,6 +32,14 @@
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					副标题</td>
+				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
+					name="TDesc" value="" />
+				</td>
+
+			</tr>
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
 					课程简介</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
 					name="Brief" value="" />
@@ -55,15 +63,16 @@
 
 			</tr>
 			
-			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					引导语</td>
-				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="TDesc" value="" />
+					Image2 图片2</td>
+				<td class="ta_01" bgColor="#ffffff"><input type="file" style="height: 40px; width: 700px;"
+					name="upload" value="" />
 				</td>
 
 			</tr>
+			
+			
 			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">

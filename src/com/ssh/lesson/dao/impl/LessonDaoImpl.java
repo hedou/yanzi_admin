@@ -21,7 +21,7 @@ public class LessonDaoImpl extends HibernateDaoSupport implements LessonDao {
 	
 		Term term = termService.findTermById(t_id);
 		
-		List<Lesson> list = (List<Lesson>) this.getHibernateTemplate().find("from Lesson where term = ?", term);
+		List<Lesson> list = (List<Lesson>) this.getHibernateTemplate().find("from Lesson  where term = ? order by Index asc", term);
 		if (list!=null && list.size()>0) {
 			return list;
 		}

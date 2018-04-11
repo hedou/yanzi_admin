@@ -43,7 +43,7 @@ public class QuestionServiceImpl implements QuestionService{
 	public void delete(Question existquestion) {
 		existquestion.setDeletes(1);
 		existquestion.setValid(1);
-		questionDao.delete(existquestion);
+		questionDao.update(existquestion);
 		
 	}
 	

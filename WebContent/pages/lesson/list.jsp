@@ -6,7 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="${pageContext.request.contextPath}/pages/css/Style1.css"
 	rel="stylesheet" type="text/css" />
-
+<style>  
+table{ table-layout:fixed;}  
+</style>  
 </HEAD>
 <body>
 	<br>
@@ -30,28 +32,28 @@
 				</tr>
 				<tr>
 					<td class="ta_01" align="center" bgColor="#f5fafe">
-						<table cellspacing="0" cellpadding="1" rules="all"
+						<table  cellspacing="0" cellpadding="1" rules="all"
 							bordercolor="gray" border="1" id="DataGrid1"
-							style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
+							style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word;table-layout:fixed;">
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
-								<td align="center" width="1%">LessonId 关卡号</td>
+								<td align="center" width="2%">LessonId 关卡号</td>
 								<td align="center" width="4%">关卡标题</td>
-								<td align="center" width="7%">StartTime 开始时间</td>
-								<td align="center" width="1%">关卡号</td>
-								<td align="center" width="6%">关卡封面图</td>
+								<td align="center" width="5%">StartTime 开始时间</td>
+								<td align="center" width="2%">关卡号</td>
+								<td align="center" width="5%">关卡封面图</td>
 								<td align="center" width="4%">关卡标题 </td>
-								<td align="center" width="9%">关卡介绍</td>
-								<td align="center" width="6%">关卡内背景图</td>
-								<td align="center" width="9%">目录</td>
-								<td align="center" width="6%">知识点回顾图片</td>
-								<td align="center" width="9%">知识点回顾文字</td>
-								<td align="center" width="1%">Valid 上下线</td>
-								<td align="center" width="7%">AddTime 添加时间</td>
-								<td align="center" width="7%">UpdateTime 更新时间</td>
-								<td width="7%" align="center">编辑</td>
-								<td width="7%" align="center">删除</td>
+								<td align="center" width="7%">关卡介绍</td>
+								<td align="center" width="5%">关卡内背景图</td>
+								<td align="center" width="7%">目录</td>
+								<td align="center" width="5%">知识点回顾图片</td>
+								<td align="center" width="7%">知识点回顾文字</td>
+								<td align="center" width="2%">Valid 上下线</td>
+								<td align="center" width="5%">AddTime 添加时间</td>
+								<td align="center" width="5%">UpdateTime 更新时间</td>
+								<td width="5%" align="center">编辑</td>
+								<td width="5%" align="center">删除</td>
 							</tr>
 							
 							<s:iterator var="u" value="lessonList" status="status">
@@ -59,68 +61,79 @@
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									 <td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="3%">
+										width="2%">
 										<s:property value="#u.LessonId" />
-										</td> 
-									 	<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%">
+									</td> 
+									 <td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="4%">
 										
 										<a style="display:inline-block;
                 width:100%; height:100%; " href="${ pageContext.request.contextPath }/question_findQuestionListByLessonId.action?LessonId=<s:property value="#u.LessonId"/>">
 										<s:property value="#u.Title" />
 										</a>
-										</td>
+									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="7%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.StartTime})}" /></td>	
+										width="5%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.StartTime})}" />
+									</td>	
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="3%"><s:property value="#u.Index" /></td>
+										width="2%"><s:property value="#u.Index" />
+									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px;"  align="center"
-										width="10%">
+										width="5%">
 										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />">
 										
-										</td>
+									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.PrimerTitle" /></td>
+										width="4%"><s:property value="#u.PrimerTitle" />
+									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.PrimerBrief" /></td>
+										width="6%"><s:property value="#u.PrimerBrief" />
+									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%">
+										width="5%">
 										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.PrimerImage" />">
-										</td>
+									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.PrimerContent" /></td>	
+										width="6%"><s:property value="#u.PrimerContent" />
+									</td>	
 										
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%">
+										width="5%">
 										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.SummaryImage" />">
-										</td>
+									</td>
 							
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.SummaryContent" />
+									<td style="CURSOR: hand; HEIGHT: 22px;text-overflow:ellipsis;overflow: hidden;white-space:nowrap;word-break:keep-all;" align="center"
+										width="6%"  ><s:property value="#u.SummaryContent" />
 										
-										</td>
+									</td>
 																					
-									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
+									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="2%">
 										<s:property value="#u.Valid" />
 									</td>
 									
 								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.AddTime})}" /></td>
-										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.UpdateTime})}" /></td>
-									<td align="center" style="HEIGHT: 22px"><a
+										width="4%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.AddTime})}" />
+								</td>
+								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="4%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.UpdateTime})}" />
+								</td>
+								<td align="center" style="HEIGHT: 22px">
+									<a
 										href="${ pageContext.request.contextPath }/lesson_edit.action?LessonId=<s:property value="#u.LessonId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_edit.gif"
 											border="0" style="CURSOR: hand">
-									</a></td>
+									</a>
+								</td>
 
-									<td align="center" style="HEIGHT: 22px"><a
+									<td align="center" style="HEIGHT: 22px">
+										<a onclick="return confirmDel()"
 										href="${ pageContext.request.contextPath }/lesson_delete.action?LessonId=<s:property value="#u.LessonId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">
-									</a></td>
+										</a>
+									</td>
 								</tr>
 								</s:if>
 							</s:iterator>
@@ -131,6 +144,16 @@
 			</TBODY>
 		</table>
 	</form>
+	<script type="text/javascript">
+		function confirmDel()
+		{
+			 if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			  } 
+			  return false; 
+		}
+	</script>
 	</div>
 </body>
 </HTML>

@@ -39,7 +39,7 @@
 								<td align="center" width="10%">课程标题</td>
 								<td align="center" width="10%">英文标题</td>
 								<td align="center" width="25%">Image 图片</td>
-
+								
 								<td align="center" width="5%">Valid 上下线</td>
 								<td align="center" width="15%">AddTime 添加时间</td>
 								<td align="center" width="15%">UpdateTime 更新时间</td>
@@ -67,9 +67,9 @@
 										width="25%">
 										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />">
 										
-										</td>
+									</td>
 										
-							
+									
 										
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
 										<s:property value="#u.Valid" />
@@ -90,7 +90,7 @@
 											border="0" style="CURSOR: hand">
 									</a></td>
 
-									<td align="center" style="HEIGHT: 22px"><a
+									<td align="center" style="HEIGHT: 22px"><a onclick="return confirmDel()"
 										href="${ pageContext.request.contextPath }/course_delete.action?CourseId=<s:property value="#u.CourseId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
@@ -124,6 +124,16 @@
 			</TBODY>
 		</table>
 	</form>
+	<script type="text/javascript">
+		function confirmDel()
+		{
+			 if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			  } 
+			  return false; 
+		}
+	</script>
 </body>
 </HTML>
 

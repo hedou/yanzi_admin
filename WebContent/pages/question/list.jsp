@@ -82,7 +82,7 @@
 											border="0" style="CURSOR: hand">
 									</a></td>
 
-									<td align="center" style="HEIGHT: 22px"><a
+									<td align="center" style="HEIGHT: 22px"><a onclick="return confirmDel()"
 										href="${ pageContext.request.contextPath }/question_delete.action?QuestionId=<s:property value="#u.QuestionId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
@@ -98,6 +98,16 @@
 			</TBODY>
 		</table>
 	</form>
+	<script type="text/javascript">
+		function confirmDel()
+		{
+			 if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			  } 
+			  return false; 
+		}
+	</script>
 </body>
 </HTML>
 

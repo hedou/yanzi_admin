@@ -9,7 +9,7 @@
 		<action name="adminUser_*" class="adminUserAction" method="{1}">
 			<result name="loginFail">/pages/admin/index.jsp</result>
 		    <result name="loginSuccess">/pages/admin/home.jsp</result>
-		
+		    <result name="input">/pages/admin/home.jsp</result>
 		</action>
 		
 		<action name="course_*" class="courseAction" method="{1}">
@@ -28,9 +28,23 @@
 			<param name="savePath">/upload</param>
 			<result name="termList">/pages/term/list.jsp</result>
 			<result name="edit">/pages/term/edit.jsp</result>
+			<result name="deleteSuccess" type="redirect">course_findInfluenceListByPage.action?currentPage=1</result>
+			<result name="updateSuccess" type="redirect">course_findInfluenceListByPage.action?currentPage=1
+			</result>
 			
 		</action>
 		
+		<action name="influence_*" class="influenceAction" method="{1}">
+		
+			<param name="savePath">/upload</param>
+			<result name="influenceList">/pages/influence/list.jsp</result>
+			<result name="edit">/pages/influence/edit.jsp</result>
+			<result name="addSuccess" type="redirect">influence_findInfluenceListByPage.action?currentPage=1
+			</result>
+			<result name="deleteSuccess" type="redirect">influence_findInfluenceListByPage.action?currentPage=1</result>
+			<result name="updateSuccess" type="redirect">influence_findInfluenceListByPage.action?currentPage=1
+			</result>
+		</action>
 		
 		<action name="lesson_*" class="lessonAction" method="{1}">
 		

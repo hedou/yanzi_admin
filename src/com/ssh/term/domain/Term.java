@@ -7,9 +7,17 @@ import com.ssh.course.domain.Course;
 
 public class Term {
 	private Integer Deletes;
+	private String Image2;
 	
 	
-	
+
+	public String getImage2() {
+		return Image2;
+	}
+
+	public void setImage2(String image2) {
+		Image2 = image2;
+	}
 
 	public Integer getDeletes() {
 		return Deletes;
@@ -35,34 +43,36 @@ public class Term {
 	private Integer term;//璇剧▼绗嚑鏈�
 	private Course course;
 
-	private File upload;
-	private String uploadFileName;
-	private String uploadContentType;
-    private String savePath;  
-
-	public File getUpload() {
+	private File[] upload;
+	private String[] uploadFileName;
+	private String[] uploadContentType;
+    public File[] getUpload() {
 		return upload;
 	}
 
-	public void setUpload(File upload) {
+	public void setUpload(File[] upload) {
 		this.upload = upload;
 	}
 
-	public String getUploadFileName() {
+	public String[] getUploadFileName() {
 		return uploadFileName;
 	}
 
-	public void setUploadFileName(String uploadFileName) {
+	public void setUploadFileName(String[] uploadFileName) {
 		this.uploadFileName = uploadFileName;
 	}
 
-	public String getUploadContentType() {
+	public String[] getUploadContentType() {
 		return uploadContentType;
 	}
 
-	public void setUploadContentType(String uploadContentType) {
+	public void setUploadContentType(String[] uploadContentType) {
 		this.uploadContentType = uploadContentType;
 	}
+
+	private String savePath;  
+
+	
 
 	public String getSavePath() {
 		return savePath;

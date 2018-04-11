@@ -36,21 +36,23 @@
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 <!-- 
 								<td align="center" width="2%">ID</td> -->
-								<td align="center" width="10%">课程标题</td>
+								<td align="center" width="7%">课程标题</td>
 								<td align="center" width="2%">Term 期数</td>
-								<td align="center" width="10%">课程简介</td>
+								<td align="center" width="7%">课程简介</td>
 								<td align="center" width="4%">Index 序号</td>
 								<td align="center" width="5%">原价</td>
-								<td align="center" width="10%">折扣价</td>
-								<td align="center" width="10%">引导语</td>
-								<td align="center" width="10%">Image 图片</td>
+								<td align="center" width="7%">折扣价</td>
+								<td align="center" width="7%">副标题</td>
+								<td align="center" width="7%">Image 图片</td>
+								<td align="center" width="7%">Image2 图片2</td>
+								
 								<td align="center" width="4%">Valid 上下线</td>
 								<td align="center" width="6%">StartTime 开始时间</td>
 								<td align="center" width="6%">EndTime 结束时间</td>
 								<td align="center" width="6%">AddTime 添加时间</td>
 								<td align="center" width="6%">UpdateTime 更新时间</td>
-								<td width="4%" align="center">编辑</td>
-								<td width="4%" align="center">删除</td>
+								<td width="7%" align="center">编辑</td>
+								<td width="7%" align="center">删除</td>
 							</tr>
 							<s:iterator var="u" value="termList" status="status">
 							<s:if test="#u.Deletes == 0">
@@ -61,7 +63,7 @@
 									</td> --%>
 						
 								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%">
+										width="7%">
 										
 										<a style="display:inline-block;
                 width:100%; height:100%; " href="${ pageContext.request.contextPath }/lesson_findLessonListByTermId.action?t_Id=<s:property value="#u.t_Id"/>">
@@ -72,7 +74,7 @@
 										width="3%"><s:property value="#u.term" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.Brief" />
+										width="7%"><s:property value="#u.Brief" />
 									</td>
 									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="3%">
@@ -83,16 +85,20 @@
 										<s:property value="#u.Price" />
 									</td>
 									
-									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="10%">
+									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="7%">
 										<s:property value="#u.Discount" />
 									</td>
 									
-									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="10%">
+									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="7%">
 										<s:property value="#u.TDesc" />
 									</td>
 									
-									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="10%">
+									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="7%">
 										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />">
+									</td>
+									
+									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="7%">
+										<img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image2" />">
 									</td>
 									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
@@ -116,7 +122,7 @@
 									</td>
 
 									<td align="center" style="HEIGHT: 22px">
-									<a href="${ pageContext.request.contextPath }/term_delete.action?t_Id=<s:property value="#u.t_Id"/>">
+									<a onclick="return confirmDel()" href="${ pageContext.request.contextPath }/term_delete.action?t_Id=<s:property value="#u.t_Id"/>">
 										<img src="${pageContext.request.contextPath}/pages/images/i_del.gif" width="16" height="16" border="0" style="CURSOR: hand">
 									</a>
 									</td>
@@ -130,6 +136,16 @@
 			</TBODY>
 		</table>
 	</form>
+	<script type="text/javascript">
+		function confirmDel()
+		{
+			 if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			  } 
+			  return false; 
+		}
+	</script>
 </body>
 </HTML>
 

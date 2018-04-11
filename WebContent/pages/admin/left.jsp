@@ -29,7 +29,7 @@
 		d = new dTree('d');
 		d.add('01',-1,'课程列表','${pageContext.request.contextPath}/course_findCourseListByPage.action?currentPage=1','','mainFrame');
 	    d.add('02',-1,'勋章列表','${pageContext.request.contextPath}/level_findLevelListByPage.action?currentPage=1','','mainFrame'); 
-		
+	    d.add('03',-1,'榜单列表','${pageContext.request.contextPath}/influence_findInfluenceListByPage.action?currentPage=1','','mainFrame'); 
 		
 		document.write(d);
 	

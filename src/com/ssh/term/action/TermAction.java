@@ -63,21 +63,43 @@ public class TermAction extends ActionSupport implements ModelDriven<Term> {
 		int courseid = (int)ActionContext.getContext().getSession().get("CourseId");
 		Course course = courseService.findCourseById(courseid);//1520391469000
 		
-		File srcFile = term.getUpload();
+		File[] srcFile = term.getUpload();
+		String[] fileName = term.getUploadFileName();
 		String path = ServletActionContext.getServletContext().getRealPath(term.getSavePath());
 		File file = new File(path);
 		if(!file.exists()){
 			file.mkdir();
 		}
-            String dstPath = path + "\\"+term.getUploadFileName();  
-            File dstFile = new File(dstPath);  
-            new CopyImage().copy(srcFile, dstFile);
-            String oldName = term.getUploadFileName();
-            String suffix = oldName.substring(oldName.lastIndexOf("."));
-//            System.out.println(ImageUploadSource.CURRICULUM_IMAGE.getPrefix());
-			String image = new UploadImage().upload(ImageUploadSource.TERM_IMAGE.getPrefix(), dstPath, suffix);
+
 			
-			term.setImage(image);
+			
+			
+			
+			        String[] serverImgPath = {ImageUploadSource.TERM_IMAGE.getPrefix(),
+			        							ImageUploadSource.TERM_IMAGE2.getPrefix()};
+					CopyImage copy = new CopyImage();
+					UploadImage upload = new UploadImage();
+					String dstPath = null;
+					for(int i=0;i<srcFile.length;i++){
+						dstPath = path + "\\"+fileName[i];  
+						File dstFile = new File(dstPath);  
+						copy.copy(srcFile[i], dstFile);
+						String oldName = fileName[i];
+						String suffix = oldName.substring(oldName.lastIndexOf("."));
+						//System.out.println(ImageUploadSource.CURRICULUM_IMAGE.getPrefix());
+						String message = upload.upload(serverImgPath[i], dstPath, suffix);
+						
+						if(i == 0){
+							term.setImage(message);
+						}else if(i == 1){
+							term.setImage2(message);
+						}
+					}
+			
+			
+			
+			
+			
 		
 		term.setCourse(course);
 		termService.addTerm(term);	

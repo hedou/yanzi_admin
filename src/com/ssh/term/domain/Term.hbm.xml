@@ -13,6 +13,8 @@
 		<property name="Title" column="t_Title"></property>
 		<property name="Index" column="t_Index"></property>
 		<property name="Image" column="t_Image"></property>
+		<property name="Image2" column="t_Image2"></property>
+		
 		<property name="Brief" column="t_Brief"></property>
 		<property name="Price" column="t_Price"></property>
 		<property name="Discount" column="t_Discount"></property>

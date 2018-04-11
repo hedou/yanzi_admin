@@ -2,7 +2,10 @@ package com.ssh.lesson.action;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -55,7 +58,14 @@ public class LessonAction extends ActionSupport implements ModelDriven<Lesson> {
 		
 		 ActionContext.getContext().getValueStack().set("lessonList",lessons);
 		 
-		 ServletActionContext.getRequest().getSession().setAttribute("t_Id", t_Id);
+    	 ServletActionContext.getRequest().getSession().setAttribute("t_Id", t_Id);
+		 
+		 
+		 
+		  
+		 
+		 
+		 
 		 
 		return "lessonList";
 	}

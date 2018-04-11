@@ -14,7 +14,7 @@ public class CourseDaoImpl extends HibernateDaoSupport implements CourseDao {
 
 	@Override
 	public List<Course> findCourseListByPage(int begin, int pageSize) {
-		 String hql = "from Course where Deletes=0";
+		 String hql = "from Course  where Deletes=0 order by UpdateTime desc";
 		    List<Course> list = (List)getHibernateTemplate().execute(
 		      new PageHibernateCallback(hql, null, begin, 
 		      pageSize));

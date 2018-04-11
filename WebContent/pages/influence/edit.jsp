@@ -14,106 +14,36 @@
 
 	</script>
 <body>
-<div  style="float:left;width:300px"  >
-		<table id="img_table" cellSpacing="1" cellPadding="5" width="100%" align="center"
-			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="1">
-			
-			<tr border="0">
-				
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					<input type="file" placeholder="上传图片" name="file" id="file" multiple/></td>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-		 			<input id="upload_btn" type="button" value="上传" />
-	 			</td>
-			 </tr>
-			
-		 </table>
-		 
-	</div>
+
 	<form id="userAction_save_do" name="Form1"
-		action="${pageContext.request.contextPath}/term_update.action"
+		action="${pageContext.request.contextPath}/influence_update.action"
 		method="post">
 		<input type="hidden" name="id"
-			value="<s:property value="model.id"/>" /> &nbsp;
+			value="<s:property value="model.InfluenceId"/>" /> &nbsp;
 		<table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
 			<tr>
 				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
-					height="26"><strong><STRONG>编辑学期</STRONG> </strong></td>
+					height="26"><strong><STRONG>编辑</STRONG> </strong></td>
 			</tr>
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					课程标题</td>
+					期数num</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"style="height: 40px; width: 700px;"
-					name="Title" value="<s:property value="model.Title"/>" />
+					name="num" value="<s:property value="model.num"/>" />
 				</td>
 
 			</tr>
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					副标题</td>
+					名字name</td>
 				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="TDesc" value="<s:property value="model.TDesc"/>"
+					name="name" value="<s:property value="model.name"/>"
 					/></td>
 			</tr>
 			
-			<tr>
-				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					课程简介</td>
-				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="Brief" value="<s:property value="model.Brief"/>"
-					/></td>
-				
-			</tr>
-			
-			<tr>
-				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					Term 学期</td>
-				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="term" value="<s:property value="model.term"/>"
-					/></td>
-				
-			</tr>
-			
-			<tr>
-			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					原价</td>
-				<td class="ta_01" bgColor="#ffffff"><input  type="text"
-					name="Price" value="<s:property value="model.Price"/>"
-					/></td>
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					折扣价</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="Discount" value="<s:property value="model.Discount"/>"
-					/></td>
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image 图片</td>
-				<td class="ta_01" bgColor="#ffffff">
-				    <input style="height: 40px; width: 700px;" type="text"
-					name="Image" value="<s:property value="model.Image"/>"
-					/>
-					<%-- <img alt="" style="height:50px; width:50px;" src="<s:property value="model.Image" />"> --%>
-				</td>
-			</tr>
-			
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image2 图片2</td>
-				<td class="ta_01" bgColor="#ffffff">
-				    <input style="height: 40px; width: 700px;" type="text"
-					name="Image2" value="<s:property value="model.Image2"/>"
-					/>
-					<%-- <img alt="" style="height:50px; width:50px;" src="<s:property value="model.Image2" />"> --%>
-				</td>
-			</tr>
-			
+		
 			
 			<tr>
 				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
@@ -131,19 +61,13 @@
 					/>
 				</td>
 			</tr>
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Index 序号</td>
-				<td class="ta_01" bgColor="#ffffff"><input style="height: 40px; width: 700px;" type="text"
-					name="Index" value="<s:property value="model.Index"/>"
-					/></td>
-			</tr>
+			
 			<tr>
 				<td width="5%" align="center" bgColor="#f5fafe" class="ta_01">
 					Valid 上下线</td>
 				<td bgColor="#ffffff" height="40%">
 				    <select name="Valid" id="Valid">
-				      	<%String m=String.valueOf(request.getAttribute("termValid")); %>
+				      	<%String m=String.valueOf(request.getAttribute("influenceValid")); %>
 				    	<option value ="0" <%="0".equals(m)?"selected":"" %>>上线</option>
   						<option value ="1" <%="1".equals(m)?"selected":"" %>>下线</option>
 				    </select>

@@ -48,6 +48,7 @@
 				<value>com/ssh/lesson/domain/Lesson.hbm.xml</value>
 				<value>com/ssh/question/domain/Question.hbm.xml</value>
 				<value>com/ssh/level/domain/Level.hbm.xml</value>
+				<value>com/ssh/influence/domain/Influence.hbm.xml</value>
 				
 			</list>
 		</property>
@@ -132,6 +133,20 @@
 	<bean name="levelDao" class="com.ssh.level.dao.impl.LevelDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	
+	
+	<bean name="influenceAction" class="com.ssh.influence.action.InfluenceAction">
+		<property name="influenceService" ref="influenceService"></property>
+	</bean>
+	<bean name="influenceService" class="com.ssh.influence.service.impl.InfluenceServiceImpl">
+		<property name="influenceDao" ref="influenceDao"></property>
+	</bean>
+	<bean name="influenceDao" class="com.ssh.influence.dao.impl.InfluenceDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	
+
 	
 </beans>
 

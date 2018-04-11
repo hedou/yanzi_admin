@@ -10,43 +10,50 @@
 
 <body>
 	<form id="userAction_save_do" name="Form1"
-		action="${pageContext.request.contextPath}/course_add.action"
+		action="${pageContext.request.contextPath}/influence_add.action"
 		method="post" enctype="multipart/form-data">
 	
 		<table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
 			<tr>
 				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
-					height="26"><strong><STRONG>添加课程</STRONG> </strong></td>
+					height="26"><strong><STRONG>添加</STRONG> </strong></td>
 			</tr>
 
-			<tr>
-				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					课程标题</td>
-				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="Title" value="" />
-				</td>
-
-			</tr>
 
 			<tr>
 				<td width="9%" align="center" bgColor="#f5fafe" class="ta_01">
-					英文标题</td>
+					num 第几期(这里填的是数字)</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text" style="height: 40px; width: 700px;"
-					name="EnTitle" value=""/>
+					name="num" value=""/>
 				</td>
 				
 			</tr>
 			
 			<tr>
 			<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
-					Image 图片</td>
+					name 名字</td>
 				<td class="ta_01" bgColor="#ffffff">
-				<input style="height: 40px; width: 700px;" type="file"
-					name="upload" value=""/>
+				<input style="height: 40px; width: 700px;" type="text"
+					name="name" value=""/>
 				</td>
 			</tr>
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					StartTime 开始时间</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="date" name="StartTime"
+					value="" /></td>
+			</tr>
 			
+			<tr>
+				<td width="10%" align="center" bgColor="#f5fafe" class="ta_01">
+					EndTime 结束时间</td>
+				<td bgColor="#ffffff" height="40%"><input
+					 type="date" name="EndTime"
+					value="<s:property value=""/>" /></td>
+			</tr>
+
 			<tr>
 				<td class="ta_01" style="WIDTH: 100%" align="center"
 					bgColor="#f5fafe" colSpan="4">
@@ -61,5 +68,6 @@
 			</tr>
 		</table>
 	</form>
+	
 </body>
 </HTML>

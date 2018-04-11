@@ -11,7 +11,7 @@
 <body>
 	<br>
 
-	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/pages/level/add.jsp">
+	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/pages/influence/add.jsp">
 	<input type="button" name="test" value="添加"/></a>
 	</div>
 	<form id="Form1" name="Form1"
@@ -21,7 +21,7 @@
 			bgColor="#f5fafe" border="0">
 			<TBODY>
 				<tr>
-					<td class="ta_01" align="center" bgColor="#afd1f3"><strong>勋章列表</strong>
+					<td class="ta_01" align="center" bgColor="#afd1f3"><strong>影响力榜单</strong>
 					</TD>
 				</tr>
 				<tr>
@@ -35,54 +35,46 @@
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
 
-								<td align="center" width="7%">LevelId 勋章号</td>
-								<td align="center" width="10%">Title 标题</td>
-								<td align="center" width="10%">Level 勋章</td>
-								<td align="center" width="25%">Image 图片</td>
-                                <td align="center" width="10%">MinExp 最小积分</td>
-                                <td align="center" width="10%">Coin 勋币</td>
-								<td align="center" width="5%">Valid 上下线</td>
-								<td align="center" width="15%">AddTime 添加时间</td>
-								<td align="center" width="15%">UpdateTime 更新时间</td>
-								<td width="7%" align="center">编辑</td>
-								<td width="7%" align="center">删除</td>
+								<td align="center" width="12%">InfluenceId 榜单号</td>
+								<td align="center" width="12%">num 第几期</td>
+								<td align="center" width="12%">name 名字</td>
+								<td align="center" width="12%">StartTime 开始时间</td>
+                                <td align="center" width="12%">EndTime 结束时间</td>
+								<td align="center" width="12%">Valid 上下线</td>
+								<td width="12%" align="center">编辑</td>
+								<td width="12%" align="center">删除</td>
 							</tr>
-							<s:iterator var="u" value="levelList" status="status">
+							<s:iterator var="u" value="pageBean.list" status="status">
 							<s:if test="#u.Deletes == 0">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="3%"><s:property value="#u.LevelId" /></td>
+										width="12%"><s:property value="#u.InfluenceId" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%">
-												<s:property value="#u.course.Title" />
+										width="12%">
+												<s:property value="#u.num" />
 										</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="10%"><s:property value="#u.Level" /></td>
+										width="12%"><s:property value="#u.name" /></td>
+			
+									
+									
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="25%"><img alt="" style="height:50px; width:50px;" src="<s:property value="#u.Image" />"></td>
-									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
-										<s:property value="#u.MinExp" />
-									</td>	
-									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
-										<s:property value="#u.Coin" />
-									</td>
-									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="5%">
+										width="12%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.StartTime})}" /></td>
+										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="12%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.EndTime})}" /></td>
+									<td style="CURSOR: hand; HEIGHT: 22px" align="left" width="12%">
 										<s:property value="#u.Valid" />
 									</td>
-									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="15%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.AddTime})}" /></td>
-										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="15%"><s:property value="%{getText('{0,date,yyyy-MM-dd}',{#u.UpdateTime})}" /></td>
 									<td align="center" style="HEIGHT: 22px"><a
-										href="${ pageContext.request.contextPath }/level_edit.action?LevelId=<s:property value="#u.LevelId"/>">
+										href="${ pageContext.request.contextPath }/influence_edit.action?InfluenceId=<s:property value="#u.InfluenceId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_edit.gif"
 											border="0" style="CURSOR: hand">
 									</a></td>
 
 									<td align="center" style="HEIGHT: 22px"><a onclick="return confirmDel()"
-										href="${ pageContext.request.contextPath }/level_delete.action?LevelId=<s:property value="#u.LevelId"/>">
+										href="${ pageContext.request.contextPath }/influence_delete.action?InfluenceId=<s:property value="#u.InfluenceId"/>">
 											<img
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">

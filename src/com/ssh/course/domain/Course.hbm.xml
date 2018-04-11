@@ -13,6 +13,7 @@
 		<property name="Title" column="Title"></property>
 		<property name="EnTitle" column="EnTitle"></property>
 		<property name="Image" column="Image"></property>
+		
 		<property name="Valid" column="Valid"></property>
 		<property name="AddTime" column="AddTime"></property>
 		<property name="UpdateTime" column="UpdateTime"></property>

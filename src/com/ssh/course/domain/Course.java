@@ -21,6 +21,9 @@ public class Course {
 	private String Title;
 	private String EnTitle;
 	private String Image;
+	
+//	Ìí¼ÓÍ¼Æ¬¶þ
+	
 	private Integer Valid;
 	private Timestamp AddTime;
 	private Timestamp UpdateTime;
