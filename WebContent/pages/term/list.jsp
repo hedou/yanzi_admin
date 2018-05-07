@@ -9,6 +9,7 @@
 
 </HEAD>
 <body>
+
 	<br>
 
 	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/pages/term/add.jsp?">
@@ -34,33 +35,34 @@
 							style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
 							<tr
 								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
-<!-- 
-								<td align="center" width="2%">ID</td> -->
+
+								<td align="center" width="2%">期数ID</td>
 								<td align="center" width="7%">课程标题</td>
 								<td align="center" width="2%">Term 期数</td>
 								<td align="center" width="7%">课程简介</td>
 								<td align="center" width="4%">Index 序号</td>
 								<td align="center" width="5%">原价</td>
-								<td align="center" width="7%">折扣价</td>
+								<td align="center" width="6%">折扣价</td>
 								<td align="center" width="7%">副标题</td>
-								<td align="center" width="7%">Image 图片</td>
-								<td align="center" width="7%">Image2 图片2</td>
+								<td align="center" width="6%">Image 图片</td>
+								<td align="center" width="6%">Image2 图片2</td>
 								
 								<td align="center" width="4%">Valid 上下线</td>
 								<td align="center" width="6%">StartTime 开始时间</td>
 								<td align="center" width="6%">EndTime 结束时间</td>
 								<td align="center" width="6%">AddTime 添加时间</td>
 								<td align="center" width="6%">UpdateTime 更新时间</td>
-								<td width="7%" align="center">编辑</td>
-								<td width="7%" align="center">删除</td>
+								<td width="5%" align="center">编辑</td>
+								<td width="5%" align="center">删除</td>
+								<td width="5%" align="center">上传到真实库</td>
 							</tr>
 							<s:iterator var="u" value="termList" status="status">
 							<s:if test="#u.Deletes == 0">
 								<tr onmouseover="this.style.backgroundColor = 'white'"
 									onmouseout="this.style.backgroundColor = '#F5FAFE';">
-									<%-- <td style="CURSOR: hand; HEIGHT: 22px" align="center"
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="3%"><s:property value="#u.t_Id" />
-									</td> --%>
+									</td>
 						
 								<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="7%">
@@ -126,6 +128,14 @@
 										<img src="${pageContext.request.contextPath}/pages/images/i_del.gif" width="16" height="16" border="0" style="CURSOR: hand">
 									</a>
 									</td>
+									
+									<td align="center" style="HEIGHT: 22px">
+										<s:if test="#u.Valid == 1 ">
+											<a onclick="return confirmTerm()" href="javascript:tijiao(<s:property value="#u.t_Id"/>)" target="_blank">
+												<img src="${pageContext.request.contextPath}/pages/images/icn.gif" width="16" height="16" border="0" style="CURSOR: hand">
+											</a>
+										</s:if>
+									</td>
 								</tr>
 								</s:if>
 							</s:iterator>
@@ -145,7 +155,30 @@
 			  } 
 			  return false; 
 		}
+		function confirmTerm()
+		{
+			if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			  } 
+			  return false;
+		}
+		function tijiao(termId)
+		{
+			var id = prompt("请输入课程id");
+			if(id ==''||id == null)
+			{
+				
+				return;
+			}
+		else
+			{
+			window.open('http://m.yetter.cn/yanzi/sync/?action=sync_term&courseId='+id+'&termId='+termId,'_blank');
+			}
+			
+		}
 	</script>
+	
 </body>
 </HTML>
 

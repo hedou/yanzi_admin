@@ -39,12 +39,13 @@
 								<td align="center" width="5%">题号</td>							
 								<!-- <td align="center" width="5%">CorrectId 正误</td> -->
 								<td align="center" width="5%">题型</td>
-								<td align="center" width="50%">JsonContent json内容</td>
+								<td align="center" width="39%">JsonContent json内容</td>
 								<td align="center" width="5%">Valid 上下线</td>
 								<td align="center" width="10%">AddTime 添加时间</td>
 								<td align="center" width="10%">UpdateTime 更新时间</td>
 								<td width="7%" align="center">编辑</td>
 								<td width="7%" align="center">删除</td>
+								<td width="7%" align="center">上传到真实库</td>
 							</tr>
 							
 							<s:iterator var="u" value="questionList" status="status">
@@ -67,7 +68,7 @@
 										<s:property value="#u.Type" />
 									</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="50%"><s:property value="#u.JsonContent" /></td>
+										width="39%"><s:property value="#u.JsonContent" /></td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="5%"><s:property value="#u.Valid" /></td>
 									
@@ -88,6 +89,17 @@
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">
 									</a></td>
+									
+									<td align="center" style="HEIGHT: 22px">
+										<s:if test="#u.Valid == 1 ">
+											<a onclick="return confirmTerm()" href="javascript:tijiao(<s:property value="#u.QuestionId"/>)" target="_blank">
+												<img
+												src="${pageContext.request.contextPath}/pages/images/icn.gif"
+												width="16" height="16" border="0" style="CURSOR: hand">
+											</a>
+											
+										</s:if>
+									</td>
 								</tr>
 								</s:if>
 							</s:iterator>
@@ -106,6 +118,28 @@
 			    return true; 
 			  } 
 			  return false; 
+		}
+		function confirmTerm()
+		{
+			if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			  } 
+			  return false;
+		}
+		function tijiao(questionId)
+		{
+			var id = prompt("请输入关卡id");
+			if(id ==''||id == null)
+				{
+					
+					return;
+				}
+			else
+				{
+				window.open('http://m.yetter.cn/yanzi/sync/?action=sync_question&lessonId='+id+'&questionId='+questionId,'_blank');
+				}
+			
 		}
 	</script>
 </body>

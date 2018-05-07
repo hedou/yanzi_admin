@@ -17,9 +17,14 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="testConnectionOnCheckin" value="false"/>
     	<property name="testConnectionOnCheckout" value="true"/>
+    	<!-- 测试 -->
 		<property name="jdbcUrl" value="jdbc:mysql://101.37.174.238:3306/test?userUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true" />
 		<property name="user" value="root" />
 		<property name="password" value="yanzi2018" />
+		<!-- 正式 -->
+		<!-- <property name="jdbcUrl" value="jdbc:mysql://118.178.182.125:3306/test?userUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true" />
+		<property name="user" value="root" />
+		<property name="password" value="yanzi@123456" /> -->
 	</bean>
 
 	<!-- 加载hibernate.cfg.xml文件，创建sessionfactory -->

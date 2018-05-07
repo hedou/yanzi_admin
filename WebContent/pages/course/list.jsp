@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
+ <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <HTML>
 <HEAD>
@@ -38,13 +38,14 @@
 								<td align="center" width="4%">ID</td>
 								<td align="center" width="10%">课程标题</td>
 								<td align="center" width="10%">英文标题</td>
-								<td align="center" width="25%">Image 图片</td>
+								<td align="center" width="18%">Image 图片</td>
 								
 								<td align="center" width="5%">Valid 上下线</td>
 								<td align="center" width="15%">AddTime 添加时间</td>
 								<td align="center" width="15%">UpdateTime 更新时间</td>
 								<td width="7%" align="center">编辑</td>
 								<td width="7%" align="center">删除</td>
+								<td width="7%" align="center">上传到真实库</td>
 							</tr>
 							<s:iterator var="u" value="pageBean.list" status="status">
 							
@@ -96,6 +97,17 @@
 											src="${pageContext.request.contextPath}/pages/images/i_del.gif"
 											width="16" height="16" border="0" style="CURSOR: hand">
 									</a></td>
+									
+									<td align="center" style="HEIGHT: 22px">
+										<s:if test="#u.Valid == 1 ">
+											<a onclick="return confirmCourse()" target="_blank"
+												href="http://m.yetter.cn/yanzi/sync/?action=sync_course&courseId=<s:property value="#u.CourseId"/>">
+													<img
+													src="${pageContext.request.contextPath}/pages/images/icn.gif"
+													width="16" height="16" border="0" style="CURSOR: hand">
+											</a>
+										</s:if>
+									</td>
 								</tr>
 								
 								</s:if>
@@ -130,6 +142,15 @@
 			 if(confirm('确定要执行此操作吗?')) 
 			  { 
 			    return true; 
+			  } 
+			  return false; 
+		}
+		function confirmCourse()
+		{
+			if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			    
 			  } 
 			  return false; 
 		}

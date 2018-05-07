@@ -11,17 +11,20 @@ table{ table-layout:fixed;}
 </style>  
 </HEAD>
 <body>
+
 	<br>
 
 	<div style="text-align:right;"><a  href="${pageContext.request.contextPath}/pages/lesson/add.jsp">
 	<input type="button" name="test" value="添加"/></a>
 	</div>
-	<div style="width:1400px">
+<!-- 	<div style="width:1400px"> -->
+	
 	<form id="Form1" name="Form1"
 		action=""
 		method="post">
 		<table cellSpacing="1" cellPadding="0" width="100%" align="center"
 			bgColor="#f5fafe" border="0">
+			
 			<TBODY>
 				<tr>
 					<td class="ta_01" align="center" bgColor="#afd1f3"><strong>关卡列表</strong>
@@ -42,18 +45,19 @@ table{ table-layout:fixed;}
 								<td align="center" width="4%">关卡标题</td>
 								<td align="center" width="5%">StartTime 开始时间</td>
 								<td align="center" width="2%">关卡号</td>
-								<td align="center" width="5%">关卡封面图</td>
+								<td align="center" width="4%">关卡封面图</td>
 								<td align="center" width="4%">关卡标题 </td>
 								<td align="center" width="7%">关卡介绍</td>
-								<td align="center" width="5%">关卡内背景图</td>
-								<td align="center" width="7%">目录</td>
-								<td align="center" width="5%">知识点回顾图片</td>
+								<td align="center" width="4%">关卡内背景图</td>
+								<td align="center" width="6%">目录</td>
+								<td align="center" width="4%">知识点回顾图片</td>
 								<td align="center" width="7%">知识点回顾文字</td>
-								<td align="center" width="2%">Valid 上下线</td>
+								<td align="center" width="1%">Valid 上下线</td>
 								<td align="center" width="5%">AddTime 添加时间</td>
 								<td align="center" width="5%">UpdateTime 更新时间</td>
 								<td width="5%" align="center">编辑</td>
 								<td width="5%" align="center">删除</td>
+								<td width="5%" align="center">上传到真实库</td>
 							</tr>
 							
 							<s:iterator var="u" value="lessonList" status="status">
@@ -134,17 +138,41 @@ table{ table-layout:fixed;}
 											width="16" height="16" border="0" style="CURSOR: hand">
 										</a>
 									</td>
+									
+									<td align="center" style="HEIGHT: 22px">
+										<s:if test="#u.Valid == 1 ">
+											<a onclick="return confirmTerm()" href="javascript:tijiao(<s:property value="#u.LessonId"/>)" target="_blank">
+												<img
+												src="${pageContext.request.contextPath}/pages/images/icn.gif"
+												width="16" height="16" border="0" style="CURSOR: hand">
+											</a>
+											
+										</s:if>
+									</td>
+									
+									
 								</tr>
 								</s:if>
-							</s:iterator>
+								
+								</s:iterator>
+							
 						</table>
 					</td>
 				</tr>
 				
 			</TBODY>
+			
 		</table>
+		
 	</form>
-	<script type="text/javascript">
+	
+<!-- 	</div> -->
+	
+	
+<script type="text/javascript">
+	
+		
+	
 		function confirmDel()
 		{
 			 if(confirm('确定要执行此操作吗?')) 
@@ -153,8 +181,30 @@ table{ table-layout:fixed;}
 			  } 
 			  return false; 
 		}
+		function confirmTerm()
+		{
+			if(confirm('确定要执行此操作吗?')) 
+			  { 
+			    return true; 
+			  } 
+			  return false;
+		}
+		function tijiao(lessonId)
+		{
+			var id = prompt("请输入期数id");
+			if(id ==''||id == null)
+			{
+				
+				return;
+			}
+		else
+			{
+			window.open('http://m.yetter.cn/yanzi/sync/?action=sync_lesson&lessonId='+lessonId+'&termId='+id,'_blank');
+			}
+			
+		}
+
 	</script>
-	</div>
 </body>
 </HTML>
 
